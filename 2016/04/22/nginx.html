@@ -7,42 +7,63 @@
   <title>nginx实用笔记 | 陈穗龙的博客</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
   <meta name="description" content="nginx实用笔记
+这是什么
+为什么用选择nginx
+安装及使用nginx
 站点配置
+域名绑定
+配置php-fpm
+http代理模块
 正向代理
+什么是代理
+http通讯原理
+抛开nginx代理模块的本质，ngx_http_proxy_module原理
 反向代理
 负载均衡
 
-站点配置正向代理反向代理
-Nginx 作为 web 服务器一个重要的功能就是反向代理。Nginx 反向代理的指令不需要新增额外的模块，默认自带 proxy_pass 指令，只需要修改配置文件就可以实现反向代理。
-
-最简单的反向代理12345678server &amp;#123;        listen       99;        s">
+这是什么
+Nginx是一款轻量级的Web 服务器/反向代理服务器及电子邮件（IMAP/POP3）代理服务器，并在一个BSD-l">
 <meta property="og:type" content="article">
 <meta property="og:title" content="nginx实用笔记">
 <meta property="og:url" content="http://blog.c2567.com/2016/04/22/nginx.html">
 <meta property="og:site_name" content="陈穗龙的博客">
 <meta property="og:description" content="nginx实用笔记
+这是什么
+为什么用选择nginx
+安装及使用nginx
 站点配置
+域名绑定
+配置php-fpm
+http代理模块
 正向代理
+什么是代理
+http通讯原理
+抛开nginx代理模块的本质，ngx_http_proxy_module原理
 反向代理
 负载均衡
 
-站点配置正向代理反向代理
-Nginx 作为 web 服务器一个重要的功能就是反向代理。Nginx 反向代理的指令不需要新增额外的模块，默认自带 proxy_pass 指令，只需要修改配置文件就可以实现反向代理。
-
-最简单的反向代理12345678server &amp;#123;        listen       99;        s">
-<meta property="og:updated_time" content="2016-04-21T21:40:06.000Z">
+这是什么
+Nginx是一款轻量级的Web 服务器/反向代理服务器及电子邮件（IMAP/POP3）代理服务器，并在一个BSD-l">
+<meta property="og:updated_time" content="2016-04-22T16:19:23.785Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="nginx实用笔记">
 <meta name="twitter:description" content="nginx实用笔记
+这是什么
+为什么用选择nginx
+安装及使用nginx
 站点配置
+域名绑定
+配置php-fpm
+http代理模块
 正向代理
+什么是代理
+http通讯原理
+抛开nginx代理模块的本质，ngx_http_proxy_module原理
 反向代理
 负载均衡
 
-站点配置正向代理反向代理
-Nginx 作为 web 服务器一个重要的功能就是反向代理。Nginx 反向代理的指令不需要新增额外的模块，默认自带 proxy_pass 指令，只需要修改配置文件就可以实现反向代理。
-
-最简单的反向代理12345678server &amp;#123;        listen       99;        s">
+这是什么
+Nginx是一款轻量级的Web 服务器/反向代理服务器及电子邮件（IMAP/POP3）代理服务器，并在一个BSD-l">
   
     <link rel="alternative" href="/atom.xml" title="陈穗龙的博客" type="application/atom+xml">
   
@@ -107,7 +128,7 @@ Nginx 作为 web 服务器一个重要的功能就是反向代理。Nginx 反向
 						<li>Links</li>
 						
 						
-						<li>Über</li>
+						<li>About</li>
 						
 					</ul>
 				</div>
@@ -270,36 +291,171 @@ Nginx 作为 web 服务器一个重要的功能就是反向代理。Nginx 反向
     <div class="article-entry" itemprop="articleBody">
       
         <h1 id="nginx实用笔记"><a href="#nginx实用笔记" class="headerlink" title="nginx实用笔记"></a>nginx实用笔记</h1><ul>
+<li>这是什么</li>
+<li>为什么用选择nginx</li>
+<li>安装及使用nginx</li>
 <li>站点配置</li>
+<li>域名绑定</li>
+<li>配置php-fpm</li>
+<li>http代理模块</li>
 <li>正向代理</li>
+<li>什么是代理</li>
+<li>http通讯原理</li>
+<li>抛开nginx代理模块的本质，ngx_http_proxy_module原理</li>
 <li>反向代理</li>
 <li>负载均衡</li>
 </ul>
-<h1 id="站点配置"><a href="#站点配置" class="headerlink" title="站点配置"></a>站点配置</h1><h1 id="正向代理"><a href="#正向代理" class="headerlink" title="正向代理"></a>正向代理</h1><h1 id="反向代理"><a href="#反向代理" class="headerlink" title="反向代理"></a>反向代理</h1><blockquote>
+<h1 id="这是什么"><a href="#这是什么" class="headerlink" title="这是什么"></a>这是什么</h1><blockquote>
+<p>Nginx是一款轻量级的Web 服务器/反向代理服务器及电子邮件（IMAP/POP3）代理服务器，并在一个BSD-like 协议下发行。由俄罗斯的程序设计师Igor Sysoev所开发，供俄国大型的入口网站及搜索引擎Rambler（俄文：Рамблер）使用。其特点是占有内存少，并发能力强，事实上nginx的并发能力确实在同类型的网页服务器中表现较好，中国大陆使用nginx网站用户有：百度、新浪、网易、腾讯等。</p>
+</blockquote>
+<p>这里都是吹牛逼的，更多吹牛逼资料请看:</p>
+<p>百度百科，<a href="http://baike.baidu.com/view/926025.htm" target="_blank" rel="external">http://baike.baidu.com/view/926025.htm</a></p>
+<p>nginx官网，<a href="http://nginx.org/en/" target="_blank" rel="external">http://nginx.org/en/</a></p>
+<h2 id="一句话总结"><a href="#一句话总结" class="headerlink" title="一句话总结"></a>一句话总结</h2><blockquote>
+<p>这是一个http服务器，同apache一样，提供web服务。</p>
+<p>可以做静态资源服务器，存放html，js，css文件等等，</p>
+<p>还可以配合FastCGI，完成对php文件的解析，实现nginx+php的动态服务。</p>
+<p>还可以拿来做反向代理，做负载均衡。</p>
+</blockquote>
+<h1 id="为什么用选择nginx"><a href="#为什么用选择nginx" class="headerlink" title="为什么用选择nginx"></a>为什么用选择nginx</h1><p>Nginx 是一个高性能的 Web 和反向代理服务器, 它具有有很多非常优越的特性:</p>
+<p>作为 Web 服务器：相比 Apache，Nginx 使用更少的资源，支持更多的并发连接，体现更高的效率，能够支持高达 50,000 个并发连接数的响应。</p>
+<p>作为负载均衡服务器：Nginx 既可以在内部直接支持 Rails 和 PHP，也可以支持作为 HTTP代理服务器 对外进行服务。</p>
+<h2 id="一句话总结-1"><a href="#一句话总结-1" class="headerlink" title="一句话总结"></a>一句话总结</h2><blockquote>
+<p>因为爱所以爱，爱就选吧~</p>
+</blockquote>
+<h1 id="安装及使用nginx"><a href="#安装及使用nginx" class="headerlink" title="安装及使用nginx"></a>安装及使用nginx</h1><p>我是用Ubuntu的，在安装软件之前要更新源.</p>
+<h2 id="更新源"><a href="#更新源" class="headerlink" title="更新源"></a>更新源</h2><p><code>apt-get update</code></p>
+<h2 id="安装nigx"><a href="#安装nigx" class="headerlink" title="安装nigx"></a>安装nigx</h2><p><code>apt-get install nginx</code></p>
+<p>等到他安装成功</p>
+<p>输入 <code>nginx -v</code> ，查看安装的版本，<br><figure class="highlight applescript"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">nginx <span class="built_in">version</span>: nginx/<span class="number">1.4</span><span class="number">.6</span> (Ubuntu)</span><br></pre></td></tr></table></figure></p>
+<h2 id="一句话总结-2"><a href="#一句话总结-2" class="headerlink" title="一句话总结"></a>一句话总结</h2><p>无惊无险的安装完成，能够愉快的玩耍了。如果没有错，直接访问服务器的ip即可看到，</p>
+<figure class="highlight applescript"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">Welcome <span class="keyword">to</span> nginx!</span><br></pre></td></tr></table></figure>
+<p>我这里用的是 <code>Ubuntu 14.04.4LTS</code> , 所以安装的版本是 nginx 1.4.6 。</p>
+<p>这里科普下，<code>LTS</code>，指，长期支持维护版本。所以在生产环节下，装软件都尽量装带LTS标志的。而不是安装最新版。<br>这样子出现bug也只是需要更新一下，就可以堵上bug啦</p>
+<h1 id="站点配置"><a href="#站点配置" class="headerlink" title="站点配置"></a>站点配置</h1><h2 id="最基本的站点配置"><a href="#最基本的站点配置" class="headerlink" title="最基本的站点配置"></a>最基本的站点配置</h2><p>站点的配置文件夹在这里，<code>/etc/nginx/sites-available/</code></p>
+<p>默认的站点文件</p>
+<p><code>vim /etc/nginx/sites-available/default</code></p>
+<p>我们可以通过，复制default，这个文件建立一个新的站点。可以理解吧~</p>
+<h3 id="最基本的html静态资源服务器"><a href="#最基本的html静态资源服务器" class="headerlink" title="最基本的html静态资源服务器"></a>最基本的html静态资源服务器</h3><figure class="highlight axapta"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">server</span> &#123;</span><br><span class="line">        <span class="meta"># 监听的端口</span></span><br><span class="line">        listen <span class="number">80</span>;</span><br><span class="line">        <span class="meta"># www目录</span></span><br><span class="line">        root /www/<span class="keyword">default</span>;</span><br><span class="line">        <span class="meta"># 默认首页（访问时，没有指定文件，会自动寻找这些文件，用作显示）</span></span><br><span class="line">        <span class="keyword">index</span> <span class="keyword">index</span>.php <span class="keyword">index</span>.html <span class="keyword">index</span>.htm;</span><br><span class="line">        <span class="meta"># 域名 http://localhost/</span></span><br><span class="line">        server_name localhost;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<p>这就是一个最简单的http静态资源服务器了。<br>可以在<code>/www/default/index.html</code>，建立文件,然后访问服务器的ip,如果是本地搭建的,访问 <code>127.0.0.1</code></p>
+<h2 id="绑定域名（也可以说是配置虚拟主机）"><a href="#绑定域名（也可以说是配置虚拟主机）" class="headerlink" title="绑定域名（也可以说是配置虚拟主机）"></a>绑定域名（也可以说是配置虚拟主机）</h2><p>server_name，就是为了绑定域名的。<br>接到请求后的匹配规则</p>
+<p>格式是这样的<br><code>server_name 域名 域名 域名 域名</code></p>
+<h3 id="准确的匹配"><a href="#准确的匹配" class="headerlink" title="准确的匹配"></a>准确的匹配</h3><figure class="highlight dns"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">server_name localhost localhost2 localhost3<span class="comment">;</span></span><br></pre></td></tr></table></figure>
+<h3 id="通配符匹配"><a href="#通配符匹配" class="headerlink" title="通配符匹配"></a>通配符匹配</h3><figure class="highlight css"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="selector-tag">server_name</span> *<span class="selector-class">.c2567</span><span class="selector-class">.com</span>;</span><br><span class="line">或者</span><br><span class="line"><span class="selector-tag">server_name</span> <span class="selector-tag">c2567</span>.*;</span><br></pre></td></tr></table></figure>
+<p>很显然<code>*</code> 就代表任意字符啦.</p>
+<h3 id="正则表达式匹配"><a href="#正则表达式匹配" class="headerlink" title="正则表达式匹配"></a>正则表达式匹配</h3><figure class="highlight taggerscript"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">server_name ~^(<span class="symbol">\d</span>)<span class="symbol">\.</span>c2567<span class="symbol">\.</span>com$;</span><br></pre></td></tr></table></figure>
+<blockquote>
+<p><code>~</code> 使用正则表达式</p>
+<p><code>()</code> 匹配内容存起来(所谓的子匹配)</p>
+<p><code>\d</code> 匹配数字</p>
+<p><code>.+?</code> 匹配一个或者多个字符, <code>?</code>是 非贪婪匹配</p>
+<p><code>$</code> 字符串末尾</p>
+<p>就先科普这点吧。基本够用了</p>
+</blockquote>
+<h2 id="配置php-fpm"><a href="#配置php-fpm" class="headerlink" title="配置php-fpm"></a>配置php-fpm</h2><figure class="highlight nginx"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br></pre></td><td class="code"><pre><span class="line"><span class="section">server</span> &#123;</span><br><span class="line">        <span class="comment"># 监听的端口</span></span><br><span class="line">        <span class="attribute">listen</span> <span class="number">80</span>;</span><br><span class="line">        <span class="comment"># www目录</span></span><br><span class="line">        <span class="attribute">root</span> /www/default;</span><br><span class="line">        <span class="comment"># 默认首页（访问时，没有指定文件，会自动寻找这些文件，用作显示）</span></span><br><span class="line">        <span class="attribute">index</span> index.php index.html index.htm;</span><br><span class="line">        <span class="comment"># 域名 http://localhost/</span></span><br><span class="line">        <span class="attribute">server_name</span> localhost;</span><br><span class="line">        </span><br><span class="line">        <span class="comment"># 在默认的nginx配置中就有下面这段</span></span><br><span class="line">        <span class="comment"># pass the PHP scripts to FastCGI server listening on 127.0.0.1:9000</span></span><br><span class="line">        <span class="comment">#</span></span><br><span class="line">        <span class="attribute">location</span> <span class="regexp">~ \.php$</span> &#123;</span><br><span class="line">        <span class="comment">#       pathinfo的配置</span></span><br><span class="line">                <span class="attribute">fastcgi_split_path_info</span><span class="regexp"> ^(.+\.php)(/.+)$</span>;</span><br><span class="line">        <span class="comment">#       这里就是使用php-fpm sock的连接方式</span></span><br><span class="line">                <span class="attribute">fastcgi_pass</span> unix:/var/run/php5-fpm.sock;</span><br><span class="line">        <span class="comment">#       默认解析文件名</span></span><br><span class="line">                <span class="attribute">fastcgi_index</span> index.php;</span><br><span class="line">                <span class="attribute">include</span> fastcgi_params;</span><br><span class="line">        &#125;</span><br><span class="line"></span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<h3 id="显然现在依然不能运行-因为连php都没有安装"><a href="#显然现在依然不能运行-因为连php都没有安装" class="headerlink" title="显然现在依然不能运行 因为连php都没有安装"></a>显然现在依然不能运行 因为连php都没有安装</h3><p>安装吧，依然是简简单单一步到位的~</p>
+<p><code>apt-get install php5</code></p>
+<p><code>apt-get install php5-fpm</code></p>
+<h3 id="稍微普及下vim的使用方法"><a href="#稍微普及下vim的使用方法" class="headerlink" title="稍微普及下vim的使用方法"></a>稍微普及下vim的使用方法</h3><p>狂按esc，可以退回命令模式，命令模式可以输入命令</p>
+<h4 id="文件保存方面"><a href="#文件保存方面" class="headerlink" title="文件保存方面"></a>文件保存方面</h4><p>:w 保存</p>
+<p>:q 退出</p>
+<p>:wq 保存并退出</p>
+<h4 id="输入方面"><a href="#输入方面" class="headerlink" title="输入方面"></a>输入方面</h4><p>命令模式下输入</p>
+<p>a , 当前位置输入</p>
+<p>o ，新起一行输入</p>
+<h4 id="一句话总结-3"><a href="#一句话总结-3" class="headerlink" title="一句话总结"></a>一句话总结</h4><p>会这些已经足够了完成编辑文件了。</p>
+<h3 id="建立一个index-php吧"><a href="#建立一个index-php吧" class="headerlink" title="建立一个index.php吧"></a>建立一个index.php吧</h3><p>那么安装好了以后，建立文件在，<code>/www/default/index.php</code></p>
+<p>写入内容</p>
+<p><code>vim /usr/share/nginx/html/index.php</code></p>
+<p>复制下面内容，在vim中，</p>
+<ol>
+<li>用方向键移动到要输入的位置</li>
+<li>按a进入输入模式</li>
+<li>粘贴内容</li>
+<li>按esc，进入vim的命令模式</li>
+<li>输入<code>:wq</code> 保存</li>
+</ol>
+<figure class="highlight xml"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="php"><span class="meta">&lt;?php</span></span><br><span class="line">    phpinfo();</span><br><span class="line"><span class="meta">?&gt;</span></span></span><br></pre></td></tr></table></figure>
+<p>那么，如果没有意外，访问服务器地址，<code>http://127.0.0.1/index.php</code> ， 就会出现phpinfo的信息咯.</p>
+<h3 id="一句话总结-4"><a href="#一句话总结-4" class="headerlink" title="一句话总结"></a>一句话总结</h3><p>配置nginx和php，非常简单，难就难在优化啊，后面我会给讲解怎么做基本的优化，在有限的服务器资源下，做到高并发，高负载，依然屹立不倒。</p>
+<h1 id="http代理模块"><a href="#http代理模块" class="headerlink" title="http代理模块"></a>http代理模块</h1><h2 id="参考资料"><a href="#参考资料" class="headerlink" title="参考资料"></a>参考资料</h2><blockquote>
+<p>ngx_http_proxy_module  <a href="http://nginx.org/en/docs/http/ngx_http_proxy_module.html" target="_blank" rel="external">http://nginx.org/en/docs/http/ngx_http_proxy_module.html</a></p>
+</blockquote>
+<h1 id="正向代理"><a href="#正向代理" class="headerlink" title="正向代理"></a>正向代理</h1><h2 id="什么是代理"><a href="#什么是代理" class="headerlink" title="什么是代理"></a>什么是代理</h2><p>这里就不说 正向代理跟反向代理有什么区别了，直入主题，代理是什么？代理相当于一个中介，中介是什么鬼，应该都知道吧。</p>
+<h3 id="http的通讯原理"><a href="#http的通讯原理" class="headerlink" title="http的通讯原理"></a>http的通讯原理</h3><p>http协议属于一问一答的的，所以就是 1对1的通讯。我问你答。</p>
+<p>客户端（问) &lt;-&gt; 服务器(答)</p>
+<p>具体点</p>
+<p>客户端-&gt;发送报文-&gt;服务器-&gt;收到报文-&gt;处理-&gt;服务器返回报文-&gt;客户端收到</p>
+<h3 id="一句话总结-5"><a href="#一句话总结-5" class="headerlink" title="一句话总结"></a>一句话总结</h3><p>形象点说，<br>我问小明： 你吃饭了吗。<br>小明答： 我吃了。</p>
+<h2 id="这跟正向代理有什么鬼关系。"><a href="#这跟正向代理有什么鬼关系。" class="headerlink" title="这跟正向代理有什么鬼关系。"></a>这跟正向代理有什么鬼关系。</h2><p>既然http是一问一答形式，那么代理服务器是不是起了中转作用了。</p>
+<p>客户端(问) -&gt; 代理服务器(再问) -&gt; 服务器(答)</p>
+<p>具体一点<br>客户端-&gt;发送报文到代理服务器-&gt;代理服务器收到报文<br>代理服务器(发送客户端报文)-&gt;真正的服务器收到报文并处理-&gt;服务器返回处理好的报文给代理服务器<br>代理服务器收到（把真正服务器返回的报文）-&gt; 发送给客户端 -&gt; 客户端收到</p>
+<h3 id="一句话总结-6"><a href="#一句话总结-6" class="headerlink" title="一句话总结"></a>一句话总结</h3><p>形象点说,</p>
+<p><code>我</code>问<code>小红</code>：小明吃饭了吗。</p>
+<p><code>小红</code>问<code>小明</code>: 吃饭了吗。</p>
+<p><code>小明</code>答<code>小红</code>说：吃了。</p>
+<p><code>小红</code>答<code>我</code>说；小明吃了。</p>
+<h2 id="最简单的正向代理"><a href="#最简单的正向代理" class="headerlink" title="最简单的正向代理"></a>最简单的正向代理</h2><p>简单的过程，</p>
+<p>客户端-&gt;代理服务器(nginx)-&gt;服务器-&gt;代理服务器(nginx)-&gt;客户端</p>
+<figure class="highlight nginx"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br></pre></td><td class="code"><pre><span class="line"><span class="section">server</span> &#123;</span><br><span class="line">    <span class="comment"># 设置dns服务器</span></span><br><span class="line">    <span class="attribute">resolver</span> <span class="number">114.114.114.114</span> <span class="number">114.114.114.115</span>;</span><br><span class="line">    <span class="comment"># 监听端口</span></span><br><span class="line">    <span class="attribute">listen</span> <span class="number">2222</span>;</span><br><span class="line"> </span><br><span class="line">    <span class="attribute">location</span> / &#123;</span><br><span class="line">        <span class="comment"># 传入nginx的变量,实际上是拼接后就是一串url</span></span><br><span class="line">        <span class="attribute">proxy_pass</span> <span class="variable">$scheme</span>://<span class="variable">$host</span><span class="variable">$request_uri</span>;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<h3 id="设置-DNS-解析"><a href="#设置-DNS-解析" class="headerlink" title="设置 DNS 解析"></a>设置 DNS 解析</h3><p><code>resolver dns地址 dns地址 dns地址</code></p>
+<p>如果改成8.8.8.8是不是就能上谷歌了啊,嘿嘿</p>
+<h4 id="注意"><a href="#注意" class="headerlink" title="注意"></a>注意</h4><p>这不支持https，因为https走的是443端口，是安全传输协议，服务器需要同客户端建立连接，才可以通讯，所以无法中转的，证书问题。</p>
+<h2 id="抛开nginx代理模块的本质，ngx-http-proxy-module原理"><a href="#抛开nginx代理模块的本质，ngx-http-proxy-module原理" class="headerlink" title="抛开nginx代理模块的本质，ngx_http_proxy_module原理"></a>抛开nginx代理模块的本质，ngx_http_proxy_module原理</h2><p>先看这个配置<br><figure class="highlight nginx"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line"><span class="section">server</span> &#123;</span><br><span class="line">        <span class="attribute">listen</span>       <span class="number">99</span>;</span><br><span class="line">        <span class="attribute">server_name</span>  localhost;</span><br><span class="line"></span><br><span class="line">        <span class="attribute">location</span> / &#123;</span><br><span class="line">            <span class="attribute">proxy_pass</span>  http://blog.c2567.com;</span><br><span class="line">        &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure></p>
+<p>我快速的解释下，<br>监听了<code>99</code>端口</p>
+<p>域名绑定为<code>localhost</code>，</p>
+<p>访问地址 </p>
+<p><a href="http://localhost:99/" target="_blank" rel="external">http://localhost:99/</a></p>
+<p><a href="http://localhost:99/1.html" target="_blank" rel="external">http://localhost:99/1.html</a></p>
+<p><a href="http://localhost:99/2.html" target="_blank" rel="external">http://localhost:99/2.html</a></p>
+<p>出现的内容是不是，对应了，我博客的内容啊</p>
+<p><a href="http://blog.c2567.com">http://blog.c2567.com</a></p>
+<p><a href="http://blog.c2567.com/1.html">http://blog.c2567.com/1.html</a></p>
+<p><a href="http://blog.c2567.com/2.html">http://blog.c2567.com/2.html</a></p>
+<blockquote>
+<p>ok，了解了这些，那么所谓的正向代理和反向代理，我也不知道这词是哪里冒出来词的，反正我读了好多次都不明白是什么意思，但是这都不重要!因为他本质，即将赤裸裸的展现在我们面前。</p>
+</blockquote>
+<p>再来看看 我们前面做的http代理服务器(正向代理)</p>
+<figure class="highlight elixir"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">location / &#123;</span><br><span class="line">    proxy_pass <span class="variable">$scheme</span><span class="symbol">://</span><span class="variable">$host</span><span class="variable">$request_uri</span>;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<p>$scheme 是不是相当于,客户端传过来的 http啊</p>
+<p>$host 是不是相当于,客户端传过来的 域名啊</p>
+<p>$request_uri 是不是相当于,客户端传过来的 域名后面的参数啊</p>
+<blockquote>
+<p>现在应该看穿nginx的代理了吧，他的本质是不是 客户端访问nginx，nginx访问<code>proxy_pass</code>拼接的地址，得到结果，再传回给客户端。</p>
+<p>既然如此，了解了他的本质，是不是改什么都不怕错了。</p>
+<p>还有什么鬼，正向代理，反向代理，http代理。各种代理，这词是不是都不用害怕了。</p>
+</blockquote>
+<h1 id="反向代理"><a href="#反向代理" class="headerlink" title="反向代理"></a>反向代理</h1><blockquote>
 <p>Nginx 作为 web 服务器一个重要的功能就是反向代理。Nginx 反向代理的指令不需要新增额外的模块，默认自带 proxy_pass 指令，只需要修改配置文件就可以实现反向代理。</p>
 </blockquote>
 <h2 id="最简单的反向代理"><a href="#最简单的反向代理" class="headerlink" title="最简单的反向代理"></a>最简单的反向代理</h2><figure class="highlight nginx"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line"><span class="section">server</span> &#123;</span><br><span class="line">        <span class="attribute">listen</span>       <span class="number">99</span>;</span><br><span class="line">        <span class="attribute">server_name</span>  localhost;</span><br><span class="line"></span><br><span class="line">        <span class="attribute">location</span> / &#123;</span><br><span class="line">            <span class="attribute">proxy_pass</span>  http://blog.c2567.com;</span><br><span class="line">        &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-<p>访问,<code>http://localhost:99/</code>,就是我的博客啦.这种过程就叫反向代理了.</p>
+<p>访问,<code>http://localhost:99/</code> , 就是我的博客啦.这种过程就叫反向代理了.</p>
 <h4 id="举个例子"><a href="#举个例子" class="headerlink" title="举个例子"></a>举个例子</h4><p>访问</p>
 <p><code>http://localhost:99/?page_id=2</code></p>
 <p>相当于访问</p>
 <p><code>http://blog.c2567.com/?page_id=2</code></p>
-<p>其他的也均为类同。<br>只是吧参数也一同访问了。实质就是做了一次中转。</p>
-<h3 id="需要注意-proxy-pass-中的url"><a href="#需要注意-proxy-pass-中的url" class="headerlink" title="需要注意 proxy_pass 中的url"></a>需要注意 proxy_pass 中的url</h3><figure class="highlight nginx"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line"><span class="section">server</span> &#123;</span><br><span class="line">        <span class="attribute">listen</span>       <span class="number">99</span>;</span><br><span class="line">        <span class="attribute">server_name</span>  localhost;</span><br><span class="line"></span><br><span class="line">        <span class="attribute">location</span> / &#123;</span><br><span class="line">            <span class="attribute">proxy_pass</span>  http://blog.c2567.com/;</span><br><span class="line">        &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-<h4 id="注意-proxy-pass-http-blog-c2567-com-只是多了"><a href="#注意-proxy-pass-http-blog-c2567-com-只是多了" class="headerlink" title="注意 proxy_pass  http://blog.c2567.com/; 只是多了/"></a>注意 <code>proxy_pass  http://blog.c2567.com/;</code> 只是多了<code>/</code></h4><p>那么结果会怎么样呢.<br>然而并没有什么..书上写着会失效来着..没复现.估计是nginx升级了.</p>
-<h1 id="负载均衡"><a href="#负载均衡" class="headerlink" title="负载均衡"></a>负载均衡</h1><p>简单来说，就是高级一点的中转代理。专业点叫 <code>负载均衡</code> 。呵呵~~<br><figure class="highlight nginx"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br></pre></td><td class="code"><pre><span class="line"><span class="section">server</span> &#123;</span><br><span class="line">        <span class="attribute">listen</span>       <span class="number">99</span>;</span><br><span class="line">        <span class="attribute">server_name</span>  localhost;</span><br><span class="line"></span><br><span class="line">        <span class="attribute">location</span> / &#123;</span><br><span class="line">            <span class="attribute">proxy_pass</span>  http://ss;</span><br><span class="line">        &#125;</span><br><span class="line">&#125;</span><br><span class="line"><span class="attribute">upstream</span> ss &#123;</span><br><span class="line">    <span class="attribute">server</span> <span class="number">127.0.0.1:81</span>;</span><br><span class="line">    <span class="attribute">server</span> <span class="number">127.0.0.1:82</span>;</span><br><span class="line">    <span class="attribute">server</span> <span class="number">127.0.0.1:83</span>;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure></p>
+<p>其他的也雷同。<br>只是吧参数也一同访问了。实质就是做了一次中转。</p>
+<h1 id="负载均衡"><a href="#负载均衡" class="headerlink" title="负载均衡"></a>负载均衡</h1><p>简单来说，就是高级一点的中转代理。专业点叫 <code>负载均衡</code> 。呵呵。</p>
+<h2 id="最简单的配置"><a href="#最简单的配置" class="headerlink" title="最简单的配置"></a>最简单的配置</h2><h3 id="显示内容的服务器"><a href="#显示内容的服务器" class="headerlink" title="显示内容的服务器"></a>显示内容的服务器</h3><figure class="highlight nginx"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line"><span class="section">server</span> &#123;</span><br><span class="line">        <span class="attribute">listen</span>       <span class="number">83</span>;</span><br><span class="line">        <span class="attribute">server_name</span>  localhost;</span><br><span class="line">        <span class="attribute">location</span> / &#123;</span><br><span class="line">            <span class="attribute">root</span>   html/<span class="number">3</span>;</span><br><span class="line">            <span class="attribute">index</span>  index.html index.htm;</span><br><span class="line">        &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<p>端口设置为81，82，83，</p>
+<p>web目录为,<br><figure class="highlight"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">html/1</span><br><span class="line"></span><br><span class="line">html/2</span><br><span class="line"></span><br><span class="line">html/3</span><br></pre></td></tr></table></figure></p>
+<p>建立文件 index.html</p>
+<p>内容为<br><figure class="highlight"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">我是端口81</span><br><span class="line"></span><br><span class="line">我是端口82</span><br><span class="line"></span><br><span class="line">我是端口83</span><br></pre></td></tr></table></figure></p>
+<p>以此类推，做出3个服务器，修改端口号和目录，页面内容</p>
+<h3 id="均衡用的服务器"><a href="#均衡用的服务器" class="headerlink" title="均衡用的服务器"></a>均衡用的服务器</h3><figure class="highlight nginx"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br></pre></td><td class="code"><pre><span class="line"><span class="section">server</span> &#123;</span><br><span class="line">        <span class="attribute">listen</span>       <span class="number">99</span>;</span><br><span class="line">        <span class="attribute">server_name</span>  localhost;</span><br><span class="line"></span><br><span class="line">        <span class="attribute">location</span> / &#123;</span><br><span class="line">            <span class="attribute">proxy_pass</span>  http://ss;</span><br><span class="line">        &#125;</span><br><span class="line">&#125;</span><br><span class="line"><span class="attribute">upstream</span> ss &#123;</span><br><span class="line">    <span class="attribute">server</span> <span class="number">127.0.0.1:81</span>;</span><br><span class="line">    <span class="attribute">server</span> <span class="number">127.0.0.1:82</span>;</span><br><span class="line">    <span class="attribute">server</span> <span class="number">127.0.0.1:83</span>;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
 <p>正如你所看到的，这里定义了3个服务器的地址，对应的访问内容为。</p>
 <p>端口81内容为,<code>我是端口81</code></p>
 <p>端口81内容为,<code>我是端口82</code></p>
 <p>端口81内容为,<code>我是端口83</code><br><figure class="highlight css"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="selector-tag">server</span> 127<span class="selector-class">.0</span><span class="selector-class">.0</span><span class="selector-class">.1</span><span class="selector-pseudo">:81</span>;</span><br><span class="line"><span class="selector-tag">server</span> 127<span class="selector-class">.0</span><span class="selector-class">.0</span><span class="selector-class">.1</span><span class="selector-pseudo">:82</span>;</span><br><span class="line"><span class="selector-tag">server</span> 127<span class="selector-class">.0</span><span class="selector-class">.0</span><span class="selector-class">.1</span><span class="selector-pseudo">:83</span>;</span><br></pre></td></tr></table></figure></p>
-<p>很显然，现在访问，<code>http://localhost:99/</code>，只要多刷新几次，就能发现内容在变化了，这就是负载均衡。</p>
+<p>很显然，现在访问，<code>http://localhost:99/</code> ，只要多刷新几次，就能发现内容在变化了，这就是负载均衡。</p>
 <h2 id="负载均衡的模式"><a href="#负载均衡的模式" class="headerlink" title="负载均衡的模式"></a>负载均衡的模式</h2><h3 id="权重设置-weight-1"><a href="#权重设置-weight-1" class="headerlink" title="权重设置 weight=1"></a>权重设置 <code>weight=1</code></h3><figure class="highlight nginx"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"><span class="attribute">upstream</span> ss &#123;</span><br><span class="line">    <span class="attribute">server</span> <span class="number">127.0.0.1:81</span> weight=<span class="number">3</span>;</span><br><span class="line">    <span class="attribute">server</span> <span class="number">127.0.0.1:82</span> weight=<span class="number">2</span>;</span><br><span class="line">    <span class="attribute">server</span> <span class="number">127.0.0.1:83</span> weight=<span class="number">1</span>;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
 <p>显而易见，参数<code>weight</code>，就是权重啦，数值越高,访问比例越大。</p>
 <h3 id="根据访问的ip分配服务器-ip-hash"><a href="#根据访问的ip分配服务器-ip-hash" class="headerlink" title="根据访问的ip分配服务器,ip_hash"></a>根据访问的ip分配服务器,<code>ip_hash</code></h3><p>如果你想，某一个ip访问某一个服务器，来保证SESSION不丢失。那么加入<code>ip_hash；</code>就可以达到目的了。</p>
 <p>准确点的解释，将访问ip的hash结果分配，每个请求固定访问一个后端服务器，</p>
 <figure class="highlight dns"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">upstream ss &#123;</span><br><span class="line">    ip_hash<span class="comment">;</span></span><br><span class="line">    server <span class="number">127.0.0.1</span>:<span class="number">81</span><span class="comment">;</span></span><br><span class="line">    server <span class="number">127.0.0.1</span>:<span class="number">82</span><span class="comment">;</span></span><br><span class="line">    server <span class="number">127.0.0.1</span>:<span class="number">83</span><span class="comment">;</span></span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
 <h3 id="根据压力自动选择压力最小的-fair"><a href="#根据压力自动选择压力最小的-fair" class="headerlink" title="根据压力自动选择压力最小的,fair"></a>根据压力自动选择压力最小的,<code>fair</code></h3><p>简单来说，谁访问快就访问谁~<br><figure class="highlight dns"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">upstream ss &#123;</span><br><span class="line">    fair<span class="comment">;</span></span><br><span class="line">    server <span class="number">127.0.0.1</span>:<span class="number">81</span><span class="comment">;</span></span><br><span class="line">    server <span class="number">127.0.0.1</span>:<span class="number">82</span><span class="comment">;</span></span><br><span class="line">    server <span class="number">127.0.0.1</span>:<span class="number">83</span><span class="comment">;</span></span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure></p>
-<p>反正我是没成功报错了，估计需要安装这个模块。<br><figure class="highlight accesslog"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">nginx: <span class="string">[emerg]</span> unknown directive <span class="string">"fair"</span></span><br></pre></td></tr></table></figure></p>
+<p>反正我是没成功报错了，估计需要安装这个模块。</p>
+<figure class="highlight accesslog"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">nginx: <span class="string">[emerg]</span> unknown directive <span class="string">"fair"</span></span><br></pre></td></tr></table></figure>
 <h2 id="更多参数"><a href="#更多参数" class="headerlink" title="更多参数"></a>更多参数</h2><p><code>down</code> 表示单前的server暂时不参与负载.</p>
 <p><code>weight=1</code> 默认为1.weight越大，负载的权重就越大。</p>
 <p><code>max_fails</code> 允许请求失败的次数默认为1.当超过最大次数时，返回proxy_next_upstream 模块定义的错误.</p>

@@ -44,7 +44,7 @@ http通讯原理
 
 这是什么
 Nginx是一款轻量级的Web 服务器/反向代理服务器及电子邮件（IMAP/POP3）代理服务器，并在一个BSD-l">
-<meta property="og:updated_time" content="2016-04-22T16:19:23.785Z">
+<meta property="og:updated_time" content="2016-04-22T16:28:41.297Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="nginx实用笔记">
 <meta name="twitter:description" content="nginx实用笔记
@@ -128,7 +128,7 @@ Nginx是一款轻量级的Web 服务器/反向代理服务器及电子邮件（I
 						<li>Links</li>
 						
 						
-						<li>About</li>
+						<li>Über</li>
 						
 					</ul>
 				</div>
@@ -461,6 +461,10 @@ Nginx是一款轻量级的Web 服务器/反向代理服务器及电子邮件（I
 <p><code>max_fails</code> 允许请求失败的次数默认为1.当超过最大次数时，返回proxy_next_upstream 模块定义的错误.</p>
 <p><code>fail_timeout</code> 如果达到<code>max_fails</code>次失败后，暂停的时间。</p>
 <h2 id="例子"><a href="#例子" class="headerlink" title="例子"></a>例子</h2><figure class="highlight nginx"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"><span class="attribute">upstream</span> backend &#123;</span><br><span class="line">    <span class="attribute">server</span> <span class="number">127.0.0.1:81</span> max_fails=<span class="number">3</span> fail_timeout=<span class="number">30s</span>;</span><br><span class="line">    <span class="attribute">server</span> <span class="number">127.0.0.1:81</span> max_fails=<span class="number">3</span> fail_timeout=<span class="number">30s</span>;</span><br><span class="line">    <span class="attribute">server</span> <span class="number">127.0.0.1:81</span> max_fails=<span class="number">3</span> fail_timeout=<span class="number">30s</span>;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<h1 id="未完待续"><a href="#未完待续" class="headerlink" title="未完待续"></a>未完待续</h1><blockquote>
+<p>一次性写了这么多东西真的好累啊~<br>联系我，QQ：496928838</p>
+</blockquote>
+
       
     </div>
     

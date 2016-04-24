@@ -1,0 +1,365 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" >
+  <title>ubuntu实用笔记 | 陈穗龙的博客</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+  <meta name="description" content="#ubuntu实用笔记这是什么吹牛逼的内容就不说了，ubuntu，在本文中就是一个服务器。为什么选择ubuntu因为爱所以爱下载ubuntuhttp://www.ubuntu.org.cn/download/serverUbuntu Server 16.04 LTS我们一般下载都选择 LTS ， LTS 代表 长期支持。这样子能获取长期的支持。远程连接配置好注意我们能不开启ftp就不开启ftp，因">
+<meta property="og:type" content="article">
+<meta property="og:title" content="ubuntu实用笔记">
+<meta property="og:url" content="http://blog.c2567.com/2016/04/24/ubuntu实用笔记.html">
+<meta property="og:site_name" content="陈穗龙的博客">
+<meta property="og:description" content="#ubuntu实用笔记这是什么吹牛逼的内容就不说了，ubuntu，在本文中就是一个服务器。为什么选择ubuntu因为爱所以爱下载ubuntuhttp://www.ubuntu.org.cn/download/serverUbuntu Server 16.04 LTS我们一般下载都选择 LTS ， LTS 代表 长期支持。这样子能获取长期的支持。远程连接配置好注意我们能不开启ftp就不开启ftp，因">
+<meta property="og:image" content="http://blog.c2567.com/img/xk.png">
+<meta property="og:image" content="http://blog.c2567.com/img/zfb.png">
+<meta property="og:updated_time" content="2016-04-24T14:20:42.813Z">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="ubuntu实用笔记">
+<meta name="twitter:description" content="#ubuntu实用笔记这是什么吹牛逼的内容就不说了，ubuntu，在本文中就是一个服务器。为什么选择ubuntu因为爱所以爱下载ubuntuhttp://www.ubuntu.org.cn/download/serverUbuntu Server 16.04 LTS我们一般下载都选择 LTS ， LTS 代表 长期支持。这样子能获取长期的支持。远程连接配置好注意我们能不开启ftp就不开启ftp，因">
+<meta name="twitter:image" content="http://blog.c2567.com/img/xk.png">
+  
+    <link rel="alternative" href="/atom.xml" title="陈穗龙的博客" type="application/atom+xml">
+  
+  
+    <link rel="icon" href="/favicon.png">
+  
+  <link rel="stylesheet" href="/css/style.css">
+  
+  <script>
+var _hmt = _hmt || [];
+(function() {
+  var hm = document.createElement("script");
+  hm.src = "//hm.baidu.com/hm.js?119c535e6fdfd1d65b41f7b0d420115e";
+  var s = document.getElementsByTagName("script")[0]; 
+  s.parentNode.insertBefore(hm, s);
+})();
+</script>
+
+</head>
+
+<body>
+  <div id="container">
+    <div class="left-col">
+    <div class="overlay"></div>
+<div class="intrude-less">
+	<header id="header" class="inner">
+		<a href="/" class="profilepic">
+			
+			<img lazy-src="/img/logo.jpg" class="js-avatar">
+			
+		</a>
+
+		<hgroup>
+		  <h1 class="header-author"><a href="/">陈穗龙</a></h1>
+		</hgroup>
+
+		
+		<p class="header-subtitle">乐于分享,传道授业</p>
+		
+
+		
+			<div class="switch-btn">
+				<div class="icon">
+					<div class="icon-ctn">
+						<div class="icon-wrap icon-house" data-idx="0">
+							<div class="birdhouse"></div>
+							<div class="birdhouse_holes"></div>
+						</div>
+						<div class="icon-wrap icon-ribbon hide" data-idx="1">
+							<div class="ribbon"></div>
+						</div>
+						
+						
+					</div>
+					
+				</div>
+				<div class="tips-box hide">
+					<div class="tips-arrow"></div>
+					<ul class="tips-inner">
+						<li>Menu</li>
+						<li>標籤</li>
+						
+						
+					</ul>
+				</div>
+			</div>
+		
+
+		<div class="switch-area">
+			<div class="switch-wrap">
+				<section class="switch-part switch-part1">
+					<nav class="header-menu">
+						<ul>
+						
+							<li><a href="/">主页</a></li>
+				        
+							<li><a href="/archives">所有文章</a></li>
+				        
+							<li><a href="/tags/sixiang">编程思想</a></li>
+				        
+							<li><a href="/tags/laravel">laravel没入门就喜欢</a></li>
+				        
+							<li><a href="/tags/nodejs">nodejs从入门就放弃</a></li>
+				        
+							<li><a href="/tags/express">express从入门就卸载</a></li>
+				        
+							<li><a href="/tags/ubuntu">ubuntu从安装到卸载</a></li>
+				        
+							<li><a href="/tags/nginx">nginx从入门到精通</a></li>
+				        
+						</ul>
+					</nav>
+					<nav class="header-nav">
+						<div class="social">
+							
+								<a class="github" target="_blank" href="https://github.com/wl496928838" title="github">github</a>
+					        
+						</div>
+					</nav>
+				</section>
+				
+				
+				<section class="switch-part switch-part2">
+					<div class="widget tagcloud" id="js-tagcloud">
+						<a href="/tags/hexo/" style="font-size: 10px;">hexo</a> <a href="/tags/nginx/" style="font-size: 20px;">nginx</a> <a href="/tags/ubuntu/" style="font-size: 20px;">ubuntu</a>
+					</div>
+				</section>
+				
+				
+				
+
+				
+			</div>
+		</div>
+		
+	</header>				
+</div>
+
+    </div>
+    <div class="mid-col">
+      <nav id="mobile-nav">
+  	<div class="overlay">
+  		<div class="slider-trigger"></div>
+  		<h1 class="header-author js-mobile-header hide">陈穗龙</h1>
+  	</div>
+	<div class="intrude-less">
+		<header id="header" class="inner">
+			<div class="profilepic">
+			
+				<img lazy-src="/img/logo.jpg" class="js-avatar">
+			
+			</div>
+			<hgroup>
+			  <h1 class="header-author">陈穗龙</h1>
+			</hgroup>
+			
+			<p class="header-subtitle">乐于分享,传道授业</p>
+			
+			<nav class="header-menu">
+				<ul>
+				
+					<li><a href="/">主页</a></li>
+		        
+					<li><a href="/archives">所有文章</a></li>
+		        
+					<li><a href="/tags/sixiang">编程思想</a></li>
+		        
+					<li><a href="/tags/laravel">laravel没入门就喜欢</a></li>
+		        
+					<li><a href="/tags/nodejs">nodejs从入门就放弃</a></li>
+		        
+					<li><a href="/tags/express">express从入门就卸载</a></li>
+		        
+					<li><a href="/tags/ubuntu">ubuntu从安装到卸载</a></li>
+		        
+					<li><a href="/tags/nginx">nginx从入门到精通</a></li>
+		        
+		        <div class="clearfix"></div>
+				</ul>
+			</nav>
+			<nav class="header-nav">
+				<div class="social">
+					
+						<a class="github" target="_blank" href="https://github.com/wl496928838" title="github">github</a>
+			        
+				</div>
+			</nav>
+		</header>				
+	</div>
+</nav>
+
+      <div class="body-wrap"><article id="post-ubuntu实用笔记" class="article article-type-post" itemscope itemprop="blogPost">
+  
+    <div class="article-meta">
+      <a href="/2016/04/24/ubuntu实用笔记.html" class="article-date">
+  	<time datetime="2016-04-23T16:05:10.000Z" itemprop="datePublished">2016-04-24</time>
+</a>
+    </div>
+  
+  <div class="article-inner">
+    
+      <input type="hidden" class="isFancy" />
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 class="article-title" itemprop="name">
+      ubuntu实用笔记
+    </h1>
+  
+
+      </header>
+      
+      <div class="article-info article-info-post">
+        
+	<div class="article-tag tagcloud">
+		<ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/ubuntu/">ubuntu</a></li></ul>
+	</div>
+
+        
+
+        <div class="clearfix"></div>
+      </div>
+      
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+            <!-- Table of Contents -->
+          
+          <div id="toc" class="toc-article">
+          <strong class="toc-title">文章目录</strong>
+          <ol class="toc"><li class="toc-item toc-level-1"><a class="toc-link" href="#这是什么"><span class="toc-number">1.</span> <span class="toc-text">这是什么</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#为什么选择ubuntu"><span class="toc-number">2.</span> <span class="toc-text">为什么选择ubuntu</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#下载ubuntu"><span class="toc-number">3.</span> <span class="toc-text">下载ubuntu</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#远程连接配置好"><span class="toc-number">3.1.</span> <span class="toc-text">远程连接配置好</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#注意"><span class="toc-number">3.2.</span> <span class="toc-text">注意</span></a></li></ol></li><li class="toc-item toc-level-1"><a class="toc-link" href="#修改ssh默认的端口号"><span class="toc-number">4.</span> <span class="toc-text">修改ssh默认的端口号</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#注意-1"><span class="toc-number">4.1.</span> <span class="toc-text">注意</span></a></li></ol></li><li class="toc-item toc-level-1"><a class="toc-link" href="#更新源"><span class="toc-number">5.</span> <span class="toc-text">更新源</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#安装软件"><span class="toc-number">6.</span> <span class="toc-text">安装软件</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#开启远程管理"><span class="toc-number">7.</span> <span class="toc-text">开启远程管理</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#方便的管理服务器"><span class="toc-number">8.</span> <span class="toc-text">方便的管理服务器</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#修改主机名"><span class="toc-number">8.1.</span> <span class="toc-text">修改主机名</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#使用root用户登录是不安全的"><span class="toc-number">8.2.</span> <span class="toc-text">使用root用户登录是不安全的</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#生效密钥对"><span class="toc-number">8.3.</span> <span class="toc-text">生效密钥对</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#下载PuTTV-Key-Generator"><span class="toc-number">8.3.1.</span> <span class="toc-text">下载PuTTV Key Generator</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#authorized-keys-权限-设置为-644"><span class="toc-number">8.4.</span> <span class="toc-text">authorized keys 权限 设置为 644</span></a></li></ol></li><li class="toc-item toc-level-1"><a class="toc-link" href="#版权声明"><span class="toc-number">9.</span> <span class="toc-text">版权声明</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#打赏我，支持我"><span class="toc-number">10.</span> <span class="toc-text">打赏我，支持我~</span></a></li></ol>
+          </div>
+          
+        <p>#ubuntu实用笔记</p><h1 id="这是什么"><a href="#这是什么" class="headerlink" title="这是什么"></a>这是什么</h1><blockquote><p>吹牛逼的内容就不说了，ubuntu，在本文中就是一个服务器。</p></blockquote><h1 id="为什么选择ubuntu"><a href="#为什么选择ubuntu" class="headerlink" title="为什么选择ubuntu"></a>为什么选择ubuntu</h1><blockquote><p>因为爱所以爱</p></blockquote><h1 id="下载ubuntu"><a href="#下载ubuntu" class="headerlink" title="下载ubuntu"></a>下载ubuntu</h1><p><a href="http://www.ubuntu.org.cn/download/server" target="_blank" rel="external">http://www.ubuntu.org.cn/download/server</a></p><p>Ubuntu Server 16.04 LTS</p><p>我们一般下载都选择 LTS ， LTS 代表 长期支持。</p><p>这样子能获取长期的支持。</p><h2 id="远程连接配置好"><a href="#远程连接配置好" class="headerlink" title="远程连接配置好"></a>远程连接配置好</h2><h2 id="注意"><a href="#注意" class="headerlink" title="注意"></a>注意</h2><ol><li><p>我们能不开启ftp就不开启ftp，因为这是一个存在安全隐患的服务。</p></li><li><p>用ssh连接.软件用PUTTY，xshell。</p></li></ol><p>ifconfig 查看网卡信息,可以看到服务器的ip地址</p><h1 id="修改ssh默认的端口号"><a href="#修改ssh默认的端口号" class="headerlink" title="修改ssh默认的端口号"></a>修改ssh默认的端口号</h1><p>虚拟机里面默认没有安装ssh工具.</p><p>ubuntu有一个很好用的包管理工具 <code>apt-get</code>，用他试，必须使用管理员权限。</p><h2 id="注意-1"><a href="#注意-1" class="headerlink" title="注意"></a>注意</h2><ol><li>服务器默认不要使用root进行远程登录</li><li>切换到root用户,<code>sudu su</code></li></ol><h1 id="更新源"><a href="#更新源" class="headerlink" title="更新源"></a>更新源</h1><p><code>apt-get update</code></p><h1 id="安装软件"><a href="#安装软件" class="headerlink" title="安装软件"></a>安装软件</h1><p><code>apt-get install vim</code> 安装vim编辑器</p><p><code>apt-get install openssl</code> 安装ssh</p><h1 id="开启远程管理"><a href="#开启远程管理" class="headerlink" title="开启远程管理"></a>开启远程管理</h1><p>要开启远程管理，需要 安装 apt-get install openssh-server</p><p>安装完以后, <code>/etc/init.d/ssh start</code></p><p>mac 通过ssh进行远程连接,<code>ssh csl@192.168.1.200</code></p><h1 id="方便的管理服务器"><a href="#方便的管理服务器" class="headerlink" title="方便的管理服务器"></a>方便的管理服务器</h1><h2 id="修改主机名"><a href="#修改主机名" class="headerlink" title="修改主机名"></a>修改主机名</h2><p>cat 查看文件信息</p><p><code>cat /etc/hostname</code></p><p>这是不是显示的，主机名啊</p><p><code>vim /etc/hostname</code></p><p>修改成自己喜欢的名字,例如web1</p><p>重启以后才会生效哦</p><p><code>reboot</code></p><h2 id="使用root用户登录是不安全的"><a href="#使用root用户登录是不安全的" class="headerlink" title="使用root用户登录是不安全的"></a>使用root用户登录是不安全的</h2><p>非对称加密</p><p>得到 公钥 私钥</p><h2 id="生效密钥对"><a href="#生效密钥对" class="headerlink" title="生效密钥对"></a>生效密钥对</h2><h3 id="下载PuTTV-Key-Generator"><a href="#下载PuTTV-Key-Generator" class="headerlink" title="下载PuTTV Key Generator"></a>下载PuTTV Key Generator</h3><p><a href="http://www.softpedia.com/get/Network-Tools/Misc-Networking-Tools/PuTTY-Key-Generator.shtml#download" target="_blank" rel="external">http://www.softpedia.com/get/Network-Tools/Misc-Networking-Tools/PuTTY-Key-Generator.shtml#download</a></p><p>sava public key 保存公钥<br>sava private key 保存私钥</p><p>私钥要保存好哦，不然再也连不上服务器了</p><p>mkdir .ssh<br>. 代表隐藏目录</p><p>进入目录<br>cd .ssh</p><p>创建文件<br>vim authorized_keys</p><p>内容放入你创建好的key</p><figure class="highlight dns"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">ssh-rsa AAAAB3NzaC1yc2EAAAABJQAAAIEA33EqWhELhF7CJEMSUo2B8jV3rWBjFChCq7h73K/aIBGA3y+CUhXViK45q6ROq4fFqz9rcnw8pyLrlxh+SpzGH185wxGMGOpNlHhtvfrbgQmMwHHSksPLdERXl/wkvVCKnwblTiRPXO/zzEWrqTuVCRmjkfzevj1pNrx6etbmaTM= rsa-key-<span class="number">20160424</span></span><br></pre></td></tr></table></figure><h2 id="authorized-keys-权限-设置为-644"><a href="#authorized-keys-权限-设置为-644" class="headerlink" title="authorized keys 权限 设置为 644"></a>authorized keys 权限 设置为 644</h2><p><code>chmod 644 ./authorized_keys</code></p><p>多个用户的话 建议设置成 600</p><p>在用户的加目录下</p><p>关闭密码登陆，确保服务器安全（关闭密码登陆之前，一定要能够正常使用密钥登陆）</p><p>上传代码用软件</p><p>filezilla</p><blockquote><p>未完待续，待整理，待完善。</p></blockquote><hr><h1 id="版权声明"><a href="#版权声明" class="headerlink" title="版权声明"></a>版权声明</h1><p><img src="/img/xk.png" alt="许可"></p><p>The <a href="http://blog.c2567.com">chensuilong blog</a> by <a href="http://blog.c2567.com">chensuilong</a> is licensed under a <a href="http://creativecommons.org/licenses/by-nc-nd/4.0/" target="_blank" rel="external">Creative Commons BY-NC-ND 4.0 International License</a>.</p><p>由 <a href="http://blog.c2567.com">陈穗龙</a> 创作并维护 <a href="http://blog.c2567.com">陈穗龙的博客</a> 采用 <a href="http://creativecommons.org/licenses/by-nc-nd/4.0/" target="_blank" rel="external">创作共用保留署名-非商业-禁止演绎4.0国际许可证</a>。</p><p>本文首发于陈穗龙的博客（ <a href="http://blog.c2567.com">http://blog.c2567.com</a> ），版权所有，侵权必究。</p><p>我的联系方式，QQ：496928838</p><h1 id="打赏我，支持我"><a href="#打赏我，支持我" class="headerlink" title="打赏我，支持我~"></a>打赏我，支持我~</h1><p>如果觉得我的文章对您有帮助，请随意打赏，您的支持将鼓励我继续创作！</p><p><img src="/img/zfb.png" alt="打赏我"></p><p>本文永久链接：<a href="http://blog.c2567.com/2016/04/24/ubuntu实用笔记.html">http://blog.c2567.com/2016/04/24/ubuntu实用笔记.html</a></p>
+      
+    </div>
+    
+  </div>
+  
+    
+<nav id="article-nav">
+  
+    <a href="/2016/04/24/hexo搭建跟我一样的博客.html" id="article-nav-newer" class="article-nav-link-wrap">
+      <strong class="article-nav-caption"><</strong>
+      <div class="article-nav-title">
+        
+          hexo搭建跟我一样的博客
+        
+      </div>
+    </a>
+  
+  
+    <a href="/2016/04/22/ubuntu.html" id="article-nav-older" class="article-nav-link-wrap">
+      <div class="article-nav-title">ubuntu配置nginx+php及优化</div>
+      <strong class="article-nav-caption">></strong>
+    </a>
+  
+</nav>
+
+  
+</article>
+
+
+
+
+
+
+<div class="duoshuo">
+	<!-- 多说评论框 start -->
+	<div class="ds-thread" data-thread-key="ubuntu实用笔记" data-title="ubuntu实用笔记" data-url="http://blog.c2567.com/2016/04/24/ubuntu实用笔记.html"></div>
+	<!-- 多说评论框 end -->
+	<!-- 多说公共JS代码 start (一个网页只需插入一次) -->
+	<script type="text/javascript">
+	var duoshuoQuery = {short_name:"chensuilong"};
+	(function() {
+		var ds = document.createElement('script');
+		ds.type = 'text/javascript';ds.async = true;
+		ds.src = (document.location.protocol == 'https:' ? 'https:' : 'http:') + '//static.duoshuo.com/embed.js';
+		ds.charset = 'UTF-8';
+		(document.getElementsByTagName('head')[0] 
+		 || document.getElementsByTagName('body')[0]).appendChild(ds);
+	})();
+	</script>
+	<!-- 多说公共JS代码 end -->
+</div>
+
+
+
+
+
+
+<script>
+(function(){
+    var bp = document.createElement('script');
+    bp.src = '//push.zhanzhang.baidu.com/push.js';
+    var s = document.getElementsByTagName("script")[0];
+    s.parentNode.insertBefore(bp, s);
+})();
+</script>     
+</div>
+      <footer id="footer">
+  <div class="outer">
+    <div id="footer-info">
+    	<div class="footer-left">
+    		&copy; 2016 陈穗龙
+    	</div>
+      	<div class="footer-right">
+      		陈穗龙的博客
+      	</div>
+    </div>
+  </div>
+</footer>
+    </div>
+    
+  <link rel="stylesheet" href="/fancybox/jquery.fancybox.css">
+
+
+<script>
+	var yiliaConfig = {
+		fancybox: true,
+		mathjax: true,
+		animate: true,
+		isHome: false,
+		isPost: true,
+		isArchive: false,
+		isTag: false,
+		isCategory: false,
+		open_in_new: false
+	}
+</script>
+<script src="http://7.url.cn/edu/jslib/comb/require-2.1.6,jquery-1.9.1.min.js"></script>
+<script src="/js/main.js"></script>
+
+
+
+
+
+
+<script type="text/x-mathjax-config">
+MathJax.Hub.Config({
+    tex2jax: {
+        inlineMath: [ ['$','$'], ["\\(","\\)"]  ],
+        processEscapes: true,
+        skipTags: ['script', 'noscript', 'style', 'textarea', 'pre', 'code']
+    }
+});
+
+MathJax.Hub.Queue(function() {
+    var all = MathJax.Hub.getAllJax(), i;
+    for(i=0; i < all.length; i += 1) {
+        all[i].SourceElement().parentNode.className += ' has-jax';                 
+    }       
+});
+</script>
+
+<script type="text/javascript" src="http://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML">
+</script>
+
+
+  </div>
+</body>
+</html>

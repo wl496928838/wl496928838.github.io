@@ -1,0 +1,356 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" >
+  <title>composer实用笔记 | 陈穗龙的博客</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+  <meta name="description" content="composer实用笔记这是什么为什么用composer安装composerhttp://docs.phpcomposer.com/03-cli.html#require使用镜像http://pkg.phpcomposer.com/#how-to-install-composer使用composer这里以redis做为例子.https://packagist.org/packages/illumi">
+<meta property="og:type" content="article">
+<meta property="og:title" content="composer实用笔记">
+<meta property="og:url" content="http://blog.c2567.com/2016/04/25/composer实用笔记.html">
+<meta property="og:site_name" content="陈穗龙的博客">
+<meta property="og:description" content="composer实用笔记这是什么为什么用composer安装composerhttp://docs.phpcomposer.com/03-cli.html#require使用镜像http://pkg.phpcomposer.com/#how-to-install-composer使用composer这里以redis做为例子.https://packagist.org/packages/illumi">
+<meta property="og:image" content="http://blog.c2567.com/img/xk.png">
+<meta property="og:image" content="http://blog.c2567.com/img/zfb.png">
+<meta property="og:updated_time" content="2016-04-25T20:45:56.407Z">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="composer实用笔记">
+<meta name="twitter:description" content="composer实用笔记这是什么为什么用composer安装composerhttp://docs.phpcomposer.com/03-cli.html#require使用镜像http://pkg.phpcomposer.com/#how-to-install-composer使用composer这里以redis做为例子.https://packagist.org/packages/illumi">
+<meta name="twitter:image" content="http://blog.c2567.com/img/xk.png">
+  
+    <link rel="alternative" href="/atom.xml" title="陈穗龙的博客" type="application/atom+xml">
+  
+  
+    <link rel="icon" href="/favicon.png">
+  
+  <link rel="stylesheet" href="/css/style.css">
+  
+  <script>
+var _hmt = _hmt || [];
+(function() {
+  var hm = document.createElement("script");
+  hm.src = "//hm.baidu.com/hm.js?119c535e6fdfd1d65b41f7b0d420115e";
+  var s = document.getElementsByTagName("script")[0]; 
+  s.parentNode.insertBefore(hm, s);
+})();
+</script>
+
+</head>
+
+<body>
+  <div id="container">
+    <div class="left-col">
+    <div class="overlay"></div>
+<div class="intrude-less">
+	<header id="header" class="inner">
+		<a href="/" class="profilepic">
+			
+			<img lazy-src="/img/logo.jpg" class="js-avatar">
+			
+		</a>
+
+		<hgroup>
+		  <h1 class="header-author"><a href="/">陈穗龙</a></h1>
+		</hgroup>
+
+		
+		<p class="header-subtitle">乐于分享,传道授业</p>
+		
+
+		
+			<div class="switch-btn">
+				<div class="icon">
+					<div class="icon-ctn">
+						<div class="icon-wrap icon-house" data-idx="0">
+							<div class="birdhouse"></div>
+							<div class="birdhouse_holes"></div>
+						</div>
+						<div class="icon-wrap icon-ribbon hide" data-idx="1">
+							<div class="ribbon"></div>
+						</div>
+						
+						
+					</div>
+					
+				</div>
+				<div class="tips-box hide">
+					<div class="tips-arrow"></div>
+					<ul class="tips-inner">
+						<li>Menu</li>
+						<li>標籤</li>
+						
+						
+					</ul>
+				</div>
+			</div>
+		
+
+		<div class="switch-area">
+			<div class="switch-wrap">
+				<section class="switch-part switch-part1">
+					<nav class="header-menu">
+						<ul>
+						
+							<li><a href="/">主页</a></li>
+				        
+							<li><a href="/archives">所有文章</a></li>
+				        
+							<li><a href="/tags/sixiang">编程思想</a></li>
+				        
+							<li><a href="/tags/laravel">laravel没入门就喜欢</a></li>
+				        
+							<li><a href="/tags/nodejs">nodejs从入门就放弃</a></li>
+				        
+							<li><a href="/tags/express">express从入门就卸载</a></li>
+				        
+							<li><a href="/tags/ubuntu">ubuntu从安装到卸载</a></li>
+				        
+							<li><a href="/tags/nginx">nginx从入门到精通</a></li>
+				        
+						</ul>
+					</nav>
+					<nav class="header-nav">
+						<div class="social">
+							
+								<a class="github" target="_blank" href="https://github.com/wl496928838" title="github">github</a>
+					        
+						</div>
+					</nav>
+				</section>
+				
+				
+				<section class="switch-part switch-part2">
+					<div class="widget tagcloud" id="js-tagcloud">
+						<a href="/tags/composer实用笔记-php/" style="font-size: 10px;">composer实用笔记 php</a> <a href="/tags/hexo/" style="font-size: 10px;">hexo</a> <a href="/tags/nginx/" style="font-size: 20px;">nginx</a> <a href="/tags/ubuntu/" style="font-size: 20px;">ubuntu</a>
+					</div>
+				</section>
+				
+				
+				
+
+				
+			</div>
+		</div>
+		
+	</header>				
+</div>
+
+    </div>
+    <div class="mid-col">
+      <nav id="mobile-nav">
+  	<div class="overlay">
+  		<div class="slider-trigger"></div>
+  		<h1 class="header-author js-mobile-header hide">陈穗龙</h1>
+  	</div>
+	<div class="intrude-less">
+		<header id="header" class="inner">
+			<div class="profilepic">
+			
+				<img lazy-src="/img/logo.jpg" class="js-avatar">
+			
+			</div>
+			<hgroup>
+			  <h1 class="header-author">陈穗龙</h1>
+			</hgroup>
+			
+			<p class="header-subtitle">乐于分享,传道授业</p>
+			
+			<nav class="header-menu">
+				<ul>
+				
+					<li><a href="/">主页</a></li>
+		        
+					<li><a href="/archives">所有文章</a></li>
+		        
+					<li><a href="/tags/sixiang">编程思想</a></li>
+		        
+					<li><a href="/tags/laravel">laravel没入门就喜欢</a></li>
+		        
+					<li><a href="/tags/nodejs">nodejs从入门就放弃</a></li>
+		        
+					<li><a href="/tags/express">express从入门就卸载</a></li>
+		        
+					<li><a href="/tags/ubuntu">ubuntu从安装到卸载</a></li>
+		        
+					<li><a href="/tags/nginx">nginx从入门到精通</a></li>
+		        
+		        <div class="clearfix"></div>
+				</ul>
+			</nav>
+			<nav class="header-nav">
+				<div class="social">
+					
+						<a class="github" target="_blank" href="https://github.com/wl496928838" title="github">github</a>
+			        
+				</div>
+			</nav>
+		</header>				
+	</div>
+</nav>
+
+      <div class="body-wrap"><article id="post-composer实用笔记" class="article article-type-post" itemscope itemprop="blogPost">
+  
+    <div class="article-meta">
+      <a href="/2016/04/25/composer实用笔记.html" class="article-date">
+  	<time datetime="2016-04-25T14:04:28.000Z" itemprop="datePublished">2016-04-25</time>
+</a>
+    </div>
+  
+  <div class="article-inner">
+    
+      <input type="hidden" class="isFancy" />
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 class="article-title" itemprop="name">
+      composer实用笔记
+    </h1>
+  
+
+      </header>
+      
+      <div class="article-info article-info-post">
+        
+	<div class="article-tag tagcloud">
+		<ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/composer实用笔记-php/">composer实用笔记 php</a></li></ul>
+	</div>
+
+        
+
+        <div class="clearfix"></div>
+      </div>
+      
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+            <!-- Table of Contents -->
+          
+          <div id="toc" class="toc-article">
+          <strong class="toc-title">文章目录</strong>
+          <ol class="toc"><li class="toc-item toc-level-1"><a class="toc-link" href="#composer实用笔记"><span class="toc-number">1.</span> <span class="toc-text">composer实用笔记</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#这是什么"><span class="toc-number">2.</span> <span class="toc-text">这是什么</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#为什么用composer"><span class="toc-number">3.</span> <span class="toc-text">为什么用composer</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#安装composer"><span class="toc-number">4.</span> <span class="toc-text">安装composer</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#使用镜像"><span class="toc-number">4.1.</span> <span class="toc-text">使用镜像</span></a></li></ol></li><li class="toc-item toc-level-1"><a class="toc-link" href="#使用composer"><span class="toc-number">5.</span> <span class="toc-text">使用composer</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#技巧"><span class="toc-number">6.</span> <span class="toc-text">技巧</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#版权声明"><span class="toc-number">7.</span> <span class="toc-text">版权声明</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#打赏我，支持我"><span class="toc-number">8.</span> <span class="toc-text">打赏我，支持我~</span></a></li></ol>
+          </div>
+          
+        <h1 id="composer实用笔记"><a href="#composer实用笔记" class="headerlink" title="composer实用笔记"></a>composer实用笔记</h1><h1 id="这是什么"><a href="#这是什么" class="headerlink" title="这是什么"></a>这是什么</h1><h1 id="为什么用composer"><a href="#为什么用composer" class="headerlink" title="为什么用composer"></a>为什么用composer</h1><h1 id="安装composer"><a href="#安装composer" class="headerlink" title="安装composer"></a>安装composer</h1><p><a href="http://docs.phpcomposer.com/03-cli.html#require" target="_blank" rel="external">http://docs.phpcomposer.com/03-cli.html#require</a></p><h2 id="使用镜像"><a href="#使用镜像" class="headerlink" title="使用镜像"></a>使用镜像</h2><p><a href="http://pkg.phpcomposer.com/#how-to-install-composer" target="_blank" rel="external">http://pkg.phpcomposer.com/#how-to-install-composer</a></p><h1 id="使用composer"><a href="#使用composer" class="headerlink" title="使用composer"></a>使用composer</h1><p>这里以redis做为例子.</p><p><a href="https://packagist.org/packages/illuminate/redis" target="_blank" rel="external">https://packagist.org/packages/illuminate/redis</a></p><p><code>php composer.phar require illuminate/redis</code></p><p>这里引入的是laravel中的redis，其实是可以独立使用的哦。</p><p><a href="http://laravelacademy.org/post/228.html" target="_blank" rel="external">http://laravelacademy.org/post/228.html</a></p><figure class="highlight xml"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br></pre></td><td class="code"><pre><span class="line"><span class="php"><span class="meta">&lt;?php</span></span><br><span class="line"><span class="keyword">require</span> <span class="string">'./vendor/autoload.php'</span>;</span><br><span class="line"></span><br><span class="line"></span><br><span class="line">$redisConfig = [</span><br><span class="line"></span><br><span class="line">        <span class="string">'cluster'</span> =&gt; <span class="keyword">false</span>,</span><br><span class="line"></span><br><span class="line">        <span class="string">'default'</span> =&gt; [</span><br><span class="line">            <span class="string">'host'</span>     =&gt;  <span class="string">'localhost'</span>,</span><br><span class="line">            <span class="string">'password'</span> =&gt;  <span class="keyword">null</span>,</span><br><span class="line">            <span class="string">'port'</span>     =&gt; <span class="number">6379</span>,</span><br><span class="line">            <span class="string">'database'</span> =&gt; <span class="number">0</span>,</span><br><span class="line">        ],</span><br><span class="line"></span><br><span class="line">    ];</span><br><span class="line">    </span><br><span class="line">$redis =  <span class="keyword">new</span> Illuminate\Redis\Database($redisConfig);</span><br><span class="line"></span><br><span class="line">$ret = $redis-&gt;set(<span class="string">'name'</span>,<span class="string">'123'</span>);</span><br><span class="line">var_dump($ret);</span><br><span class="line"></span><br><span class="line">$ret = $redis-&gt;get(<span class="string">'name'</span>);</span><br><span class="line">var_dump($ret);</span><br><span class="line"></span><br><span class="line">$ret = $redis-&gt;incr(<span class="string">'num'</span>);</span><br><span class="line">var_dump($ret);</span><br><span class="line"></span><br><span class="line"><span class="comment">//var_dump($redis);</span></span></span><br></pre></td></tr></table></figure><p>坦率的讲，其实我只是想证明，laravel里面的redis是可以copy出来单独用的。这就是组件式开发的好处，copy到那都能用</p><p>实际上我们应该使用。predis/predis，这才是原始的，没有经过laravel包装的。因为我们都没有用laravel，所以不需要laravel的包装啊。当然用了也没什么，可能是我强迫症吧~</p><p><a href="https://packagist.org/packages/predis/predis" target="_blank" rel="external">https://packagist.org/packages/predis/predis</a></p><h1 id="技巧"><a href="#技巧" class="headerlink" title="技巧"></a>技巧</h1><hr><h1 id="版权声明"><a href="#版权声明" class="headerlink" title="版权声明"></a>版权声明</h1><p><img src="/img/xk.png" alt="许可"></p><p>The <a href="http://blog.c2567.com">chensuilong blog</a> by <a href="http://blog.c2567.com">chensuilong</a> is licensed under a <a href="http://creativecommons.org/licenses/by-nc-nd/4.0/" target="_blank" rel="external">Creative Commons BY-NC-ND 4.0 International License</a>.</p><p>由 <a href="http://blog.c2567.com">陈穗龙</a> 创作并维护 <a href="http://blog.c2567.com">陈穗龙的博客</a> 采用 <a href="http://creativecommons.org/licenses/by-nc-nd/4.0/" target="_blank" rel="external">创作共用保留署名-非商业-禁止演绎4.0国际许可证</a>。</p><p>本文首发于陈穗龙的博客（ <a href="http://blog.c2567.com">http://blog.c2567.com</a> ），版权所有，侵权必究。</p><p>我的联系方式，QQ：496928838</p><h1 id="打赏我，支持我"><a href="#打赏我，支持我" class="headerlink" title="打赏我，支持我~"></a>打赏我，支持我~</h1><p>如果觉得我的文章对您有帮助，请随意打赏，您的支持将鼓励我继续创作！</p><p><img src="/img/zfb.png" alt="打赏我"></p><p>本文永久链接：<a href="http://blog.c2567.com/2016/04/25/composer实用笔记.html">http://blog.c2567.com/2016/04/25/composer实用笔记.html</a></p>
+      
+    </div>
+    
+  </div>
+  
+    
+<nav id="article-nav">
+  
+  
+    <a href="/2016/04/24/hexo搭建跟我一样的博客.html" id="article-nav-older" class="article-nav-link-wrap">
+      <div class="article-nav-title">hexo搭建跟我一样的博客</div>
+      <strong class="article-nav-caption">></strong>
+    </a>
+  
+</nav>
+
+  
+</article>
+
+
+
+
+
+
+<div class="duoshuo">
+	<!-- 多说评论框 start -->
+	<div class="ds-thread" data-thread-key="composer实用笔记" data-title="composer实用笔记" data-url="http://blog.c2567.com/2016/04/25/composer实用笔记.html"></div>
+	<!-- 多说评论框 end -->
+	<!-- 多说公共JS代码 start (一个网页只需插入一次) -->
+	<script type="text/javascript">
+	var duoshuoQuery = {short_name:"chensuilong"};
+	(function() {
+		var ds = document.createElement('script');
+		ds.type = 'text/javascript';ds.async = true;
+		ds.src = (document.location.protocol == 'https:' ? 'https:' : 'http:') + '//static.duoshuo.com/embed.js';
+		ds.charset = 'UTF-8';
+		(document.getElementsByTagName('head')[0] 
+		 || document.getElementsByTagName('body')[0]).appendChild(ds);
+	})();
+	</script>
+	<!-- 多说公共JS代码 end -->
+</div>
+
+
+
+
+
+
+<script>
+(function(){
+    var bp = document.createElement('script');
+    bp.src = '//push.zhanzhang.baidu.com/push.js';
+    var s = document.getElementsByTagName("script")[0];
+    s.parentNode.insertBefore(bp, s);
+})();
+</script>     
+</div>
+      <footer id="footer">
+  <div class="outer">
+    <div id="footer-info">
+    	<div class="footer-left">
+    		&copy; 2016 陈穗龙
+    	</div>
+      	<div class="footer-right">
+      		陈穗龙的博客
+      	</div>
+    </div>
+  </div>
+</footer>
+    </div>
+    
+  <link rel="stylesheet" href="/fancybox/jquery.fancybox.css">
+
+
+<script>
+	var yiliaConfig = {
+		fancybox: true,
+		mathjax: true,
+		animate: true,
+		isHome: false,
+		isPost: true,
+		isArchive: false,
+		isTag: false,
+		isCategory: false,
+		open_in_new: false
+	}
+</script>
+<script src="http://7.url.cn/edu/jslib/comb/require-2.1.6,jquery-1.9.1.min.js"></script>
+<script src="/js/main.js"></script>
+
+
+
+
+
+
+<script type="text/x-mathjax-config">
+MathJax.Hub.Config({
+    tex2jax: {
+        inlineMath: [ ['$','$'], ["\\(","\\)"]  ],
+        processEscapes: true,
+        skipTags: ['script', 'noscript', 'style', 'textarea', 'pre', 'code']
+    }
+});
+
+MathJax.Hub.Queue(function() {
+    var all = MathJax.Hub.getAllJax(), i;
+    for(i=0; i < all.length; i += 1) {
+        all[i].SourceElement().parentNode.className += ' has-jax';                 
+    }       
+});
+</script>
+
+<script type="text/javascript" src="http://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML">
+</script>
+
+
+  </div>
+</body>
+</html>

@@ -1,0 +1,374 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" >
+  <title>laravel 帮助ide生成智能提示 laravel-ide-helper | 陈穗龙的博客</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+  <meta name="description" content="laravel 帮助ide生成智能提示 laravel-ide-helperhttps://github.com/barryvdh/laravel-ide-helper这是什么可以帮助ide，生成代码，智能提示的工具。极大的减少编码错误，加快开发效率。为什么需要ide直接用文本编辑器开发Laravel困难重重，必须使用有智能提示的IDE工具才好。否则就不知道这个类从哪个文件夹加载，或者判断语法是否">
+<meta property="og:type" content="article">
+<meta property="og:title" content="laravel 帮助ide生成智能提示 laravel-ide-helper">
+<meta property="og:url" content="http://blog.c2567.com/2016-05-15/laravel-帮助ide生成智能提示-laravel-ide-helper/index.html">
+<meta property="og:site_name" content="陈穗龙的博客">
+<meta property="og:description" content="laravel 帮助ide生成智能提示 laravel-ide-helperhttps://github.com/barryvdh/laravel-ide-helper这是什么可以帮助ide，生成代码，智能提示的工具。极大的减少编码错误，加快开发效率。为什么需要ide直接用文本编辑器开发Laravel困难重重，必须使用有智能提示的IDE工具才好。否则就不知道这个类从哪个文件夹加载，或者判断语法是否">
+<meta property="og:image" content="http://blog.c2567.com/2016-05-15/laravel-帮助ide生成智能提示-laravel-ide-helper/1.jpg">
+<meta property="og:image" content="http://blog.c2567.com/img/xk.png">
+<meta property="og:image" content="http://blog.c2567.com/img/zfb.png">
+<meta property="og:updated_time" content="2016-05-14T21:54:32.613Z">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="laravel 帮助ide生成智能提示 laravel-ide-helper">
+<meta name="twitter:description" content="laravel 帮助ide生成智能提示 laravel-ide-helperhttps://github.com/barryvdh/laravel-ide-helper这是什么可以帮助ide，生成代码，智能提示的工具。极大的减少编码错误，加快开发效率。为什么需要ide直接用文本编辑器开发Laravel困难重重，必须使用有智能提示的IDE工具才好。否则就不知道这个类从哪个文件夹加载，或者判断语法是否">
+<meta name="twitter:image" content="http://blog.c2567.com/2016-05-15/laravel-帮助ide生成智能提示-laravel-ide-helper/1.jpg">
+  
+    <link rel="alternative" href="/atom.xml" title="陈穗龙的博客" type="application/atom+xml">
+  
+  
+    <link rel="icon" href="/favicon.png">
+  
+  <link rel="stylesheet" href="/css/style.css">
+  
+  <script>
+var _hmt = _hmt || [];
+(function() {
+  var hm = document.createElement("script");
+  hm.src = "//hm.baidu.com/hm.js?119c535e6fdfd1d65b41f7b0d420115e";
+  var s = document.getElementsByTagName("script")[0]; 
+  s.parentNode.insertBefore(hm, s);
+})();
+</script>
+
+</head>
+
+<body>
+  <div id="container">
+    <div class="left-col">
+    <div class="overlay"></div>
+<div class="intrude-less">
+	<header id="header" class="inner">
+		<a href="/" class="profilepic">
+			
+			<img lazy-src="/img/logo.jpg" class="js-avatar">
+			
+		</a>
+
+		<hgroup>
+		  <h1 class="header-author"><a href="/">陈穗龙</a></h1>
+		</hgroup>
+
+		
+		<p class="header-subtitle">乐于分享,传道授业</p>
+		
+
+		
+			<div class="switch-btn">
+				<div class="icon">
+					<div class="icon-ctn">
+						<div class="icon-wrap icon-house" data-idx="0">
+							<div class="birdhouse"></div>
+							<div class="birdhouse_holes"></div>
+						</div>
+						<div class="icon-wrap icon-ribbon hide" data-idx="1">
+							<div class="ribbon"></div>
+						</div>
+						
+						
+					</div>
+					
+				</div>
+				<div class="tips-box hide">
+					<div class="tips-arrow"></div>
+					<ul class="tips-inner">
+						<li>Menu</li>
+						<li>標籤</li>
+						
+						
+					</ul>
+				</div>
+			</div>
+		
+
+		<div class="switch-area">
+			<div class="switch-wrap">
+				<section class="switch-part switch-part1">
+					<nav class="header-menu">
+						<ul>
+						
+							<li><a href="/">主页</a></li>
+				        
+							<li><a href="/archives">所有文章</a></li>
+				        
+							<li><a href="/tags/编程思想">编程思想</a></li>
+				        
+							<li><a href="/tags/laravel">laravel没入门就喜欢</a></li>
+				        
+							<li><a href="/tags/nodejs">nodejs从入门到放弃</a></li>
+				        
+							<li><a href="/tags/express">express没入门就入院</a></li>
+				        
+							<li><a href="/tags/database">数据库从删库到跑路</a></li>
+				        
+							<li><a href="/tags/ubuntu">ubuntu从安装到卸载</a></li>
+				        
+							<li><a href="/tags/nginx">nginx从入门到精通</a></li>
+				        
+							<li><a href="/tags/redis">redis从入门到精通</a></li>
+				        
+						</ul>
+					</nav>
+					<nav class="header-nav">
+						<div class="social">
+							
+								<a class="github" target="_blank" href="https://github.com/wl496928838" title="github">github</a>
+					        
+						</div>
+					</nav>
+				</section>
+				
+				
+				<section class="switch-part switch-part2">
+					<div class="widget tagcloud" id="js-tagcloud">
+						<a href="/tags/composer实用笔记-php/" style="font-size: 10px;">composer实用笔记 php</a> <a href="/tags/hexo/" style="font-size: 10px;">hexo</a> <a href="/tags/laravel/" style="font-size: 20px;">laravel</a> <a href="/tags/nginx/" style="font-size: 13.33px;">nginx</a> <a href="/tags/ubuntu/" style="font-size: 13.33px;">ubuntu</a> <a href="/tags/编程思想/" style="font-size: 16.67px;">编程思想</a>
+					</div>
+				</section>
+				
+				
+				
+
+				
+			</div>
+		</div>
+		
+	</header>				
+</div>
+
+    </div>
+    <div class="mid-col">
+      <nav id="mobile-nav">
+  	<div class="overlay">
+  		<div class="slider-trigger"></div>
+  		<h1 class="header-author js-mobile-header hide">陈穗龙</h1>
+  	</div>
+	<div class="intrude-less">
+		<header id="header" class="inner">
+			<div class="profilepic">
+			
+				<img lazy-src="/img/logo.jpg" class="js-avatar">
+			
+			</div>
+			<hgroup>
+			  <h1 class="header-author">陈穗龙</h1>
+			</hgroup>
+			
+			<p class="header-subtitle">乐于分享,传道授业</p>
+			
+			<nav class="header-menu">
+				<ul>
+				
+					<li><a href="/">主页</a></li>
+		        
+					<li><a href="/archives">所有文章</a></li>
+		        
+					<li><a href="/tags/编程思想">编程思想</a></li>
+		        
+					<li><a href="/tags/laravel">laravel没入门就喜欢</a></li>
+		        
+					<li><a href="/tags/nodejs">nodejs从入门到放弃</a></li>
+		        
+					<li><a href="/tags/express">express没入门就入院</a></li>
+		        
+					<li><a href="/tags/database">数据库从删库到跑路</a></li>
+		        
+					<li><a href="/tags/ubuntu">ubuntu从安装到卸载</a></li>
+		        
+					<li><a href="/tags/nginx">nginx从入门到精通</a></li>
+		        
+					<li><a href="/tags/redis">redis从入门到精通</a></li>
+		        
+		        <div class="clearfix"></div>
+				</ul>
+			</nav>
+			<nav class="header-nav">
+				<div class="social">
+					
+						<a class="github" target="_blank" href="https://github.com/wl496928838" title="github">github</a>
+			        
+				</div>
+			</nav>
+		</header>				
+	</div>
+</nav>
+
+      <div class="body-wrap"><article id="post-laravel-帮助ide生成智能提示-laravel-ide-helper" class="article article-type-post" itemscope itemprop="blogPost">
+  
+    <div class="article-meta">
+      <a href="/2016-05-15/laravel-帮助ide生成智能提示-laravel-ide-helper/" class="article-date">
+  	<time datetime="2016-05-14T21:35:21.000Z" itemprop="datePublished">2016-05-15</time>
+</a>
+    </div>
+  
+  <div class="article-inner">
+    
+      <input type="hidden" class="isFancy" />
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 class="article-title" itemprop="name">
+      laravel 帮助ide生成智能提示 laravel-ide-helper
+    </h1>
+  
+
+      </header>
+      
+      <div class="article-info article-info-post">
+        
+	<div class="article-tag tagcloud">
+		<ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/laravel/">laravel</a></li></ul>
+	</div>
+
+        
+
+        <div class="clearfix"></div>
+      </div>
+      
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+            <!-- Table of Contents -->
+          
+          <div id="toc" class="toc-article">
+          <strong class="toc-title">文章目录</strong>
+          <ol class="toc"><li class="toc-item toc-level-1"><a class="toc-link" href="#laravel-帮助ide生成智能提示-laravel-ide-helper"><span class="toc-number">1.</span> <span class="toc-text">laravel 帮助ide生成智能提示 laravel-ide-helper</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#这是什么"><span class="toc-number">2.</span> <span class="toc-text">这是什么</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#为什么需要ide"><span class="toc-number">3.</span> <span class="toc-text">为什么需要ide</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#安装"><span class="toc-number">4.</span> <span class="toc-text">安装</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#使用"><span class="toc-number">5.</span> <span class="toc-text">使用</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#总结"><span class="toc-number">6.</span> <span class="toc-text">总结</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#版权声明"><span class="toc-number">7.</span> <span class="toc-text">版权声明</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#打赏我，支持我"><span class="toc-number">8.</span> <span class="toc-text">打赏我，支持我~</span></a></li></ol>
+          </div>
+          
+        <h1 id="laravel-帮助ide生成智能提示-laravel-ide-helper"><a href="#laravel-帮助ide生成智能提示-laravel-ide-helper" class="headerlink" title="laravel 帮助ide生成智能提示 laravel-ide-helper"></a>laravel 帮助ide生成智能提示 laravel-ide-helper</h1><p><a href="https://github.com/barryvdh/laravel-ide-helper" target="_blank" rel="external">https://github.com/barryvdh/laravel-ide-helper</a></p><h1 id="这是什么"><a href="#这是什么" class="headerlink" title="这是什么"></a>这是什么</h1><p>可以帮助ide，生成代码，智能提示的工具。极大的减少编码错误，加快开发效率。</p><h1 id="为什么需要ide"><a href="#为什么需要ide" class="headerlink" title="为什么需要ide"></a>为什么需要ide</h1><p>直接用文本编辑器开发Laravel困难重重，必须使用有智能提示的IDE工具才好。否则就不知道这个类从哪个文件夹加载，或者判断语法是否正确也不知道。所以给<code>Phpstrom</code>安装强力的插件，Laravel专属的IDE工具。</p><p>laravel大量使用了，别名，简称，也就是，门面（Facades），导致的结果，就是ide不能智能的提示代码，所以，如果没有提示，你将需要记忆大量的代码，这是极痛苦的事情。</p><h1 id="安装"><a href="#安装" class="headerlink" title="安装"></a>安装</h1><p>composer require barryvdh/laravel-ide-helper</p><p>打开 <code>config\app.php</code> 配置文件，增加以下代码</p><figure class="highlight ruby"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">Barryvdh\LaravelIdeHelper\IdeHelperServiceProvider::<span class="class"><span class="keyword">class</span>,</span></span><br></pre></td></tr></table></figure><p>终端执行</p><p><code>php artisan ide-helper:generate</code></p><p>框架根目录下自动出现了<code>_ide_helper.php</code>文件</p><h1 id="使用"><a href="#使用" class="headerlink" title="使用"></a>使用</h1><p>现在使用ide,输入代码都有提示啦.</p><img src="/2016-05-15/laravel-帮助ide生成智能提示-laravel-ide-helper/1.jpg" alt="laravel-ide-helper" title="laravel-ide-helper"><h1 id="总结"><a href="#总结" class="headerlink" title="总结"></a>总结</h1><p>开发laravel，必须使用ide，不然需要记忆的也太多了，编码的快乐，毅然成为痛苦。<br>大量的命名空间，大量的方法，大量的门面（Facades），简直是噩梦。<br>所以，这是使用ide开发，laravel，必备神器。</p><p>这个仅仅用于开发阶段哦，上线运行，记得去掉 app.php 中添加的配置。</p><hr><h1 id="版权声明"><a href="#版权声明" class="headerlink" title="版权声明"></a>版权声明</h1><p><img src="/img/xk.png" alt="许可"></p><p>The <a href="http://blog.c2567.com">chensuilong blog</a> by <a href="http://blog.c2567.com">chensuilong</a> is licensed under a <a href="http://creativecommons.org/licenses/by-nc-nd/4.0/" target="_blank" rel="external">Creative Commons BY-NC-ND 4.0 International License</a>.</p><p>由 <a href="http://blog.c2567.com">陈穗龙</a> 创作并维护 <a href="http://blog.c2567.com">陈穗龙的博客</a> 采用 <a href="http://creativecommons.org/licenses/by-nc-nd/4.0/" target="_blank" rel="external">创作共用保留署名-非商业-禁止演绎4.0国际许可证</a>。</p><p>本文首发于陈穗龙的博客（ <a href="http://blog.c2567.com">http://blog.c2567.com</a> ），版权所有，侵权必究。</p><p>我的联系方式，QQ：496928838</p><h1 id="打赏我，支持我"><a href="#打赏我，支持我" class="headerlink" title="打赏我，支持我~"></a>打赏我，支持我~</h1><p>如果觉得我的文章对您有帮助，请随意打赏，您的支持将鼓励我继续创作！</p><p><img src="/img/zfb.png" alt="打赏我"></p><p>本文永久链接：<a href="http://blog.c2567.com/2016-05-15/laravel-帮助ide生成智能提示-laravel-ide-helper/">http://blog.c2567.com/2016-05-15/laravel-帮助ide生成智能提示-laravel-ide-helper/</a></p>
+      
+    </div>
+    
+  </div>
+  
+    
+<nav id="article-nav">
+  
+    <a href="/2016-05-15/laravel-开发前准备工作/" id="article-nav-newer" class="article-nav-link-wrap">
+      <strong class="article-nav-caption"><</strong>
+      <div class="article-nav-title">
+        
+          laravel 开发前准备工作
+        
+      </div>
+    </a>
+  
+  
+    <a href="/2016-05-15/laravel-调试工具-Laravel-debugbar/" id="article-nav-older" class="article-nav-link-wrap">
+      <div class="article-nav-title">laravel 调试工具 Laravel-debugbar</div>
+      <strong class="article-nav-caption">></strong>
+    </a>
+  
+</nav>
+
+  
+</article>
+
+
+
+
+
+
+<div class="duoshuo">
+	<!-- 多说评论框 start -->
+	<div class="ds-thread" data-thread-key="laravel-帮助ide生成智能提示-laravel-ide-helper" data-title="laravel 帮助ide生成智能提示 laravel-ide-helper" data-url="http://blog.c2567.com/2016-05-15/laravel-帮助ide生成智能提示-laravel-ide-helper/"></div>
+	<!-- 多说评论框 end -->
+	<!-- 多说公共JS代码 start (一个网页只需插入一次) -->
+	<script type="text/javascript">
+	var duoshuoQuery = {short_name:"chensuilong"};
+	(function() {
+		var ds = document.createElement('script');
+		ds.type = 'text/javascript';ds.async = true;
+		ds.src = (document.location.protocol == 'https:' ? 'https:' : 'http:') + '//static.duoshuo.com/embed.js';
+		ds.charset = 'UTF-8';
+		(document.getElementsByTagName('head')[0] 
+		 || document.getElementsByTagName('body')[0]).appendChild(ds);
+	})();
+	</script>
+	<!-- 多说公共JS代码 end -->
+</div>
+
+
+
+
+
+
+<script>
+(function(){
+    var bp = document.createElement('script');
+    bp.src = '//push.zhanzhang.baidu.com/push.js';
+    var s = document.getElementsByTagName("script")[0];
+    s.parentNode.insertBefore(bp, s);
+})();
+</script>     
+</div>
+      <footer id="footer">
+  <div class="outer">
+    <div id="footer-info">
+    	<div class="footer-left">
+    		&copy; 2016 陈穗龙
+    	</div>
+      	<div class="footer-right">
+      		陈穗龙的博客
+      	</div>
+    </div>
+  </div>
+</footer>
+    </div>
+    
+  <link rel="stylesheet" href="/fancybox/jquery.fancybox.css">
+
+
+<script>
+	var yiliaConfig = {
+		fancybox: true,
+		mathjax: true,
+		animate: true,
+		isHome: false,
+		isPost: true,
+		isArchive: false,
+		isTag: false,
+		isCategory: false,
+		open_in_new: false
+	}
+</script>
+<script src="http://7.url.cn/edu/jslib/comb/require-2.1.6,jquery-1.9.1.min.js"></script>
+<script src="/js/main.js"></script>
+
+
+
+
+
+
+<script type="text/x-mathjax-config">
+MathJax.Hub.Config({
+    tex2jax: {
+        inlineMath: [ ['$','$'], ["\\(","\\)"]  ],
+        processEscapes: true,
+        skipTags: ['script', 'noscript', 'style', 'textarea', 'pre', 'code']
+    }
+});
+
+MathJax.Hub.Queue(function() {
+    var all = MathJax.Hub.getAllJax(), i;
+    for(i=0; i < all.length; i += 1) {
+        all[i].SourceElement().parentNode.className += ' has-jax';                 
+    }       
+});
+</script>
+
+<script type="text/javascript" src="http://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML">
+</script>
+
+
+  </div>
+</body>
+</html>

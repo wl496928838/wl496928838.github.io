@@ -1,0 +1,374 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" >
+  <title>laravel 调试工具 Laravel-debugbar | 陈穗龙的博客</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+  <meta name="description" content="laravel 调试工具 Laravel-debugbarhttps://github.com/barryvdh/laravel-debugbar这是什么简单来讲，用于laravel的调试工具，可以显示laravel中各种输出的信息的，这只用在开发环境，上线运行记得删除哦。为什么需要debug使用方便，界面很炫酷，是不二之选。安装composer require barryvdh/laravel-">
+<meta property="og:type" content="article">
+<meta property="og:title" content="laravel 调试工具 Laravel-debugbar">
+<meta property="og:url" content="http://blog.c2567.com/2016-05-15/laravel-调试工具-Laravel-debugbar/index.html">
+<meta property="og:site_name" content="陈穗龙的博客">
+<meta property="og:description" content="laravel 调试工具 Laravel-debugbarhttps://github.com/barryvdh/laravel-debugbar这是什么简单来讲，用于laravel的调试工具，可以显示laravel中各种输出的信息的，这只用在开发环境，上线运行记得删除哦。为什么需要debug使用方便，界面很炫酷，是不二之选。安装composer require barryvdh/laravel-">
+<meta property="og:image" content="http://blog.c2567.com/2016-05-15/laravel-调试工具-Laravel-debugbar/1.png">
+<meta property="og:image" content="http://blog.c2567.com/img/xk.png">
+<meta property="og:image" content="http://blog.c2567.com/img/zfb.png">
+<meta property="og:updated_time" content="2016-05-14T21:21:11.220Z">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="laravel 调试工具 Laravel-debugbar">
+<meta name="twitter:description" content="laravel 调试工具 Laravel-debugbarhttps://github.com/barryvdh/laravel-debugbar这是什么简单来讲，用于laravel的调试工具，可以显示laravel中各种输出的信息的，这只用在开发环境，上线运行记得删除哦。为什么需要debug使用方便，界面很炫酷，是不二之选。安装composer require barryvdh/laravel-">
+<meta name="twitter:image" content="http://blog.c2567.com/2016-05-15/laravel-调试工具-Laravel-debugbar/1.png">
+  
+    <link rel="alternative" href="/atom.xml" title="陈穗龙的博客" type="application/atom+xml">
+  
+  
+    <link rel="icon" href="/favicon.png">
+  
+  <link rel="stylesheet" href="/css/style.css">
+  
+  <script>
+var _hmt = _hmt || [];
+(function() {
+  var hm = document.createElement("script");
+  hm.src = "//hm.baidu.com/hm.js?119c535e6fdfd1d65b41f7b0d420115e";
+  var s = document.getElementsByTagName("script")[0]; 
+  s.parentNode.insertBefore(hm, s);
+})();
+</script>
+
+</head>
+
+<body>
+  <div id="container">
+    <div class="left-col">
+    <div class="overlay"></div>
+<div class="intrude-less">
+	<header id="header" class="inner">
+		<a href="/" class="profilepic">
+			
+			<img lazy-src="/img/logo.jpg" class="js-avatar">
+			
+		</a>
+
+		<hgroup>
+		  <h1 class="header-author"><a href="/">陈穗龙</a></h1>
+		</hgroup>
+
+		
+		<p class="header-subtitle">乐于分享,传道授业</p>
+		
+
+		
+			<div class="switch-btn">
+				<div class="icon">
+					<div class="icon-ctn">
+						<div class="icon-wrap icon-house" data-idx="0">
+							<div class="birdhouse"></div>
+							<div class="birdhouse_holes"></div>
+						</div>
+						<div class="icon-wrap icon-ribbon hide" data-idx="1">
+							<div class="ribbon"></div>
+						</div>
+						
+						
+					</div>
+					
+				</div>
+				<div class="tips-box hide">
+					<div class="tips-arrow"></div>
+					<ul class="tips-inner">
+						<li>Menu</li>
+						<li>標籤</li>
+						
+						
+					</ul>
+				</div>
+			</div>
+		
+
+		<div class="switch-area">
+			<div class="switch-wrap">
+				<section class="switch-part switch-part1">
+					<nav class="header-menu">
+						<ul>
+						
+							<li><a href="/">主页</a></li>
+				        
+							<li><a href="/archives">所有文章</a></li>
+				        
+							<li><a href="/tags/编程思想">编程思想</a></li>
+				        
+							<li><a href="/tags/laravel">laravel没入门就喜欢</a></li>
+				        
+							<li><a href="/tags/nodejs">nodejs从入门到放弃</a></li>
+				        
+							<li><a href="/tags/express">express没入门就入院</a></li>
+				        
+							<li><a href="/tags/database">数据库从删库到跑路</a></li>
+				        
+							<li><a href="/tags/ubuntu">ubuntu从安装到卸载</a></li>
+				        
+							<li><a href="/tags/nginx">nginx从入门到精通</a></li>
+				        
+							<li><a href="/tags/redis">redis从入门到精通</a></li>
+				        
+						</ul>
+					</nav>
+					<nav class="header-nav">
+						<div class="social">
+							
+								<a class="github" target="_blank" href="https://github.com/wl496928838" title="github">github</a>
+					        
+						</div>
+					</nav>
+				</section>
+				
+				
+				<section class="switch-part switch-part2">
+					<div class="widget tagcloud" id="js-tagcloud">
+						<a href="/tags/composer实用笔记-php/" style="font-size: 10px;">composer实用笔记 php</a> <a href="/tags/hexo/" style="font-size: 10px;">hexo</a> <a href="/tags/laravel/" style="font-size: 20px;">laravel</a> <a href="/tags/nginx/" style="font-size: 13.33px;">nginx</a> <a href="/tags/ubuntu/" style="font-size: 13.33px;">ubuntu</a> <a href="/tags/编程思想/" style="font-size: 16.67px;">编程思想</a>
+					</div>
+				</section>
+				
+				
+				
+
+				
+			</div>
+		</div>
+		
+	</header>				
+</div>
+
+    </div>
+    <div class="mid-col">
+      <nav id="mobile-nav">
+  	<div class="overlay">
+  		<div class="slider-trigger"></div>
+  		<h1 class="header-author js-mobile-header hide">陈穗龙</h1>
+  	</div>
+	<div class="intrude-less">
+		<header id="header" class="inner">
+			<div class="profilepic">
+			
+				<img lazy-src="/img/logo.jpg" class="js-avatar">
+			
+			</div>
+			<hgroup>
+			  <h1 class="header-author">陈穗龙</h1>
+			</hgroup>
+			
+			<p class="header-subtitle">乐于分享,传道授业</p>
+			
+			<nav class="header-menu">
+				<ul>
+				
+					<li><a href="/">主页</a></li>
+		        
+					<li><a href="/archives">所有文章</a></li>
+		        
+					<li><a href="/tags/编程思想">编程思想</a></li>
+		        
+					<li><a href="/tags/laravel">laravel没入门就喜欢</a></li>
+		        
+					<li><a href="/tags/nodejs">nodejs从入门到放弃</a></li>
+		        
+					<li><a href="/tags/express">express没入门就入院</a></li>
+		        
+					<li><a href="/tags/database">数据库从删库到跑路</a></li>
+		        
+					<li><a href="/tags/ubuntu">ubuntu从安装到卸载</a></li>
+		        
+					<li><a href="/tags/nginx">nginx从入门到精通</a></li>
+		        
+					<li><a href="/tags/redis">redis从入门到精通</a></li>
+		        
+		        <div class="clearfix"></div>
+				</ul>
+			</nav>
+			<nav class="header-nav">
+				<div class="social">
+					
+						<a class="github" target="_blank" href="https://github.com/wl496928838" title="github">github</a>
+			        
+				</div>
+			</nav>
+		</header>				
+	</div>
+</nav>
+
+      <div class="body-wrap"><article id="post-laravel-调试工具-Laravel-debugbar" class="article article-type-post" itemscope itemprop="blogPost">
+  
+    <div class="article-meta">
+      <a href="/2016-05-15/laravel-调试工具-Laravel-debugbar/" class="article-date">
+  	<time datetime="2016-05-14T21:04:46.000Z" itemprop="datePublished">2016-05-15</time>
+</a>
+    </div>
+  
+  <div class="article-inner">
+    
+      <input type="hidden" class="isFancy" />
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 class="article-title" itemprop="name">
+      laravel 调试工具 Laravel-debugbar
+    </h1>
+  
+
+      </header>
+      
+      <div class="article-info article-info-post">
+        
+	<div class="article-tag tagcloud">
+		<ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/laravel/">laravel</a></li></ul>
+	</div>
+
+        
+
+        <div class="clearfix"></div>
+      </div>
+      
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+            <!-- Table of Contents -->
+          
+          <div id="toc" class="toc-article">
+          <strong class="toc-title">文章目录</strong>
+          <ol class="toc"><li class="toc-item toc-level-1"><a class="toc-link" href="#laravel-调试工具-Laravel-debugbar"><span class="toc-number">1.</span> <span class="toc-text">laravel 调试工具 Laravel-debugbar</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#这是什么"><span class="toc-number">2.</span> <span class="toc-text">这是什么</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#为什么需要debug"><span class="toc-number">3.</span> <span class="toc-text">为什么需要debug</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#安装"><span class="toc-number">4.</span> <span class="toc-text">安装</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#配置"><span class="toc-number">5.</span> <span class="toc-text">配置</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#使用"><span class="toc-number">6.</span> <span class="toc-text">使用</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#输出信息"><span class="toc-number">6.1.</span> <span class="toc-text">输出信息</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#计算耗时"><span class="toc-number">6.2.</span> <span class="toc-text">计算耗时</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#方便的辅助函数"><span class="toc-number">6.3.</span> <span class="toc-text">方便的辅助函数</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#运行时启用-禁用"><span class="toc-number">6.4.</span> <span class="toc-text">运行时启用/禁用</span></a></li></ol></li><li class="toc-item toc-level-1"><a class="toc-link" href="#心得"><span class="toc-number">7.</span> <span class="toc-text">心得</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#版权声明"><span class="toc-number">8.</span> <span class="toc-text">版权声明</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#打赏我，支持我"><span class="toc-number">9.</span> <span class="toc-text">打赏我，支持我~</span></a></li></ol>
+          </div>
+          
+        <h1 id="laravel-调试工具-Laravel-debugbar"><a href="#laravel-调试工具-Laravel-debugbar" class="headerlink" title="laravel 调试工具 Laravel-debugbar"></a>laravel 调试工具 Laravel-debugbar</h1><p><a href="https://github.com/barryvdh/laravel-debugbar" target="_blank" rel="external">https://github.com/barryvdh/laravel-debugbar</a></p><h1 id="这是什么"><a href="#这是什么" class="headerlink" title="这是什么"></a>这是什么</h1><p>简单来讲，用于laravel的调试工具，可以显示laravel中各种输出的信息的，这只用在开发环境，上线运行记得删除哦。</p><h1 id="为什么需要debug"><a href="#为什么需要debug" class="headerlink" title="为什么需要debug"></a>为什么需要debug</h1><p>使用方便，界面很炫酷，是不二之选。</p><img src="/2016-05-15/laravel-调试工具-Laravel-debugbar/1.png" alt="Laravel-debugbar" title="Laravel-debugbar"><h1 id="安装"><a href="#安装" class="headerlink" title="安装"></a>安装</h1><p><code>composer require barryvdh/laravel-debugbar</code></p><h1 id="配置"><a href="#配置" class="headerlink" title="配置"></a>配置</h1><p><code>app.php</code> 中添加</p><p><code>Barryvdh\Debugbar\ServiceProvider::class,</code></p><p><code>&#39;Debugbar&#39; =&gt; Barryvdh\Debugbar\Facade::class,</code></p><p>创建配置文件</p><p><code>php artisan vendor:publish --provider=&quot;Barryvdh\Debugbar\ServiceProvider&quot;</code></p><h1 id="使用"><a href="#使用" class="headerlink" title="使用"></a>使用</h1><h2 id="输出信息"><a href="#输出信息" class="headerlink" title="输出信息"></a>输出信息</h2><figure class="highlight elixir"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="symbol">Debugbar:</span><span class="symbol">:info</span>(<span class="variable">$object</span>);</span><br><span class="line"><span class="symbol">Debugbar:</span><span class="symbol">:error</span>(<span class="string">'Error!'</span>);</span><br><span class="line"><span class="symbol">Debugbar:</span><span class="symbol">:warning</span>(<span class="string">'Watch out…'</span>);</span><br><span class="line"><span class="symbol">Debugbar:</span><span class="symbol">:addMessage</span>(<span class="string">'Another message'</span>, <span class="string">'mylabel'</span>);</span><br></pre></td></tr></table></figure><h2 id="计算耗时"><a href="#计算耗时" class="headerlink" title="计算耗时"></a>计算耗时</h2><figure class="highlight php"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">Debugbar::startMeasure(<span class="string">'render'</span>,<span class="string">'Time for rendering'</span>);</span><br><span class="line">Debugbar::stopMeasure(<span class="string">'render'</span>);</span><br><span class="line">Debugbar::addMeasure(<span class="string">'now'</span>, LARAVEL_START, microtime(<span class="keyword">true</span>));</span><br><span class="line">Debugbar::measure(<span class="string">'My long operation'</span>, <span class="function"><span class="keyword">function</span><span class="params">()</span> </span>&#123;</span><br><span class="line">    <span class="comment">// Do something…</span></span><br><span class="line">&#125;);</span><br></pre></td></tr></table></figure><h2 id="方便的辅助函数"><a href="#方便的辅助函数" class="headerlink" title="方便的辅助函数"></a>方便的辅助函数</h2><figure class="highlight php"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">// All arguments will be dumped as a debug message</span></span><br><span class="line">debug($var1, $someString, $intValue, $object);</span><br><span class="line"></span><br><span class="line">start_measure(<span class="string">'render'</span>,<span class="string">'Time for rendering'</span>);</span><br><span class="line">stop_measure(<span class="string">'render'</span>);</span><br><span class="line">add_measure(<span class="string">'now'</span>, LARAVEL_START, microtime(<span class="keyword">true</span>));</span><br><span class="line">measure(<span class="string">'My long operation'</span>, <span class="function"><span class="keyword">function</span><span class="params">()</span> </span>&#123;</span><br><span class="line">    <span class="comment">// Do something…</span></span><br><span class="line">&#125;);</span><br></pre></td></tr></table></figure><h2 id="运行时启用-禁用"><a href="#运行时启用-禁用" class="headerlink" title="运行时启用/禁用"></a>运行时启用/禁用</h2><p>运行时，你可以启用或禁用DebugBar。<br></p><figure class="highlight aspectj"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">\Debugbar::enable();</span><br><span class="line">\Debugbar::disable(); <span class="comment">//临时关闭debug</span></span><br></pre></td></tr></table></figure><p></p><h1 id="心得"><a href="#心得" class="headerlink" title="心得"></a>心得</h1><p>一般来讲，输出变量就使用<code>debug</code>，易记，好用。<br></p><figure class="highlight lisp"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">debug(['name'=&gt;'chensuilong'])<span class="comment">;</span></span><br></pre></td></tr></table></figure><p></p><hr><h1 id="版权声明"><a href="#版权声明" class="headerlink" title="版权声明"></a>版权声明</h1><p><img src="/img/xk.png" alt="许可"></p><p>The <a href="http://blog.c2567.com">chensuilong blog</a> by <a href="http://blog.c2567.com">chensuilong</a> is licensed under a <a href="http://creativecommons.org/licenses/by-nc-nd/4.0/" target="_blank" rel="external">Creative Commons BY-NC-ND 4.0 International License</a>.</p><p>由 <a href="http://blog.c2567.com">陈穗龙</a> 创作并维护 <a href="http://blog.c2567.com">陈穗龙的博客</a> 采用 <a href="http://creativecommons.org/licenses/by-nc-nd/4.0/" target="_blank" rel="external">创作共用保留署名-非商业-禁止演绎4.0国际许可证</a>。</p><p>本文首发于陈穗龙的博客（ <a href="http://blog.c2567.com">http://blog.c2567.com</a> ），版权所有，侵权必究。</p><p>我的联系方式，QQ：496928838</p><h1 id="打赏我，支持我"><a href="#打赏我，支持我" class="headerlink" title="打赏我，支持我~"></a>打赏我，支持我~</h1><p>如果觉得我的文章对您有帮助，请随意打赏，您的支持将鼓励我继续创作！</p><p><img src="/img/zfb.png" alt="打赏我"></p><p>本文永久链接：<a href="http://blog.c2567.com/2016-05-15/laravel-调试工具-Laravel-debugbar/">http://blog.c2567.com/2016-05-15/laravel-调试工具-Laravel-debugbar/</a></p>
+      
+    </div>
+    
+  </div>
+  
+    
+<nav id="article-nav">
+  
+    <a href="/2016-05-15/laravel-帮助ide生成智能提示-laravel-ide-helper/" id="article-nav-newer" class="article-nav-link-wrap">
+      <strong class="article-nav-caption"><</strong>
+      <div class="article-nav-title">
+        
+          laravel 帮助ide生成智能提示 laravel-ide-helper
+        
+      </div>
+    </a>
+  
+  
+    <a href="/2016-05-14/laravel网站后台/" id="article-nav-older" class="article-nav-link-wrap">
+      <div class="article-nav-title">laravel网站后台设计</div>
+      <strong class="article-nav-caption">></strong>
+    </a>
+  
+</nav>
+
+  
+</article>
+
+
+
+
+
+
+<div class="duoshuo">
+	<!-- 多说评论框 start -->
+	<div class="ds-thread" data-thread-key="laravel-调试工具-Laravel-debugbar" data-title="laravel 调试工具 Laravel-debugbar" data-url="http://blog.c2567.com/2016-05-15/laravel-调试工具-Laravel-debugbar/"></div>
+	<!-- 多说评论框 end -->
+	<!-- 多说公共JS代码 start (一个网页只需插入一次) -->
+	<script type="text/javascript">
+	var duoshuoQuery = {short_name:"chensuilong"};
+	(function() {
+		var ds = document.createElement('script');
+		ds.type = 'text/javascript';ds.async = true;
+		ds.src = (document.location.protocol == 'https:' ? 'https:' : 'http:') + '//static.duoshuo.com/embed.js';
+		ds.charset = 'UTF-8';
+		(document.getElementsByTagName('head')[0] 
+		 || document.getElementsByTagName('body')[0]).appendChild(ds);
+	})();
+	</script>
+	<!-- 多说公共JS代码 end -->
+</div>
+
+
+
+
+
+
+<script>
+(function(){
+    var bp = document.createElement('script');
+    bp.src = '//push.zhanzhang.baidu.com/push.js';
+    var s = document.getElementsByTagName("script")[0];
+    s.parentNode.insertBefore(bp, s);
+})();
+</script>     
+</div>
+      <footer id="footer">
+  <div class="outer">
+    <div id="footer-info">
+    	<div class="footer-left">
+    		&copy; 2016 陈穗龙
+    	</div>
+      	<div class="footer-right">
+      		陈穗龙的博客
+      	</div>
+    </div>
+  </div>
+</footer>
+    </div>
+    
+  <link rel="stylesheet" href="/fancybox/jquery.fancybox.css">
+
+
+<script>
+	var yiliaConfig = {
+		fancybox: true,
+		mathjax: true,
+		animate: true,
+		isHome: false,
+		isPost: true,
+		isArchive: false,
+		isTag: false,
+		isCategory: false,
+		open_in_new: false
+	}
+</script>
+<script src="http://7.url.cn/edu/jslib/comb/require-2.1.6,jquery-1.9.1.min.js"></script>
+<script src="/js/main.js"></script>
+
+
+
+
+
+
+<script type="text/x-mathjax-config">
+MathJax.Hub.Config({
+    tex2jax: {
+        inlineMath: [ ['$','$'], ["\\(","\\)"]  ],
+        processEscapes: true,
+        skipTags: ['script', 'noscript', 'style', 'textarea', 'pre', 'code']
+    }
+});
+
+MathJax.Hub.Queue(function() {
+    var all = MathJax.Hub.getAllJax(), i;
+    for(i=0; i < all.length; i += 1) {
+        all[i].SourceElement().parentNode.className += ' has-jax';                 
+    }       
+});
+</script>
+
+<script type="text/javascript" src="http://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML">
+</script>
+
+
+  </div>
+</body>
+</html>
